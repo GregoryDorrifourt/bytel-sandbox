@@ -1,0 +1,43 @@
+// [1] !!! IMPORTANT: THIS IS AN EXCEPTION NEVER PUT VARIABLES DIRECTLY HERE
+
+/* ParseInt
+ * ==================================== */
+
+@function parseInt($n) {
+    @return $n / ($n * 0 + 1);
+}
+
+/* Return a Rem size basd on $base-font-size: see variables file to edit
+* ==================================== */
+
+@function rem($value) {
+
+    $browser-font-size: 16px; // [1]
+    $root: parseInt($browser-font-size);
+    $val: parseInt($value);
+    $return: ();
+
+    @if unit($value) == "px" {
+        $return: append($return, $val / $root * 1rem);
+    } @else {
+        $return: append($return, ($val * $root * 1px));
+    }
+
+    @return $return;
+}
+
+/* Convert root font size to match $default-root-font-size (see _custom.scss)
+ * ==================================== */
+
+@function rootFontSize($value) {
+
+    $default-root-font: 62.5%; // [1]
+    $ratio: parseInt($default-root-font / 100); // Instead of value * (root / 100)
+    $unit: "rem";
+
+    @if unit($value) == "em" { // @TODO: Extract units dynamically
+        @return $value / $ratio;
+    }
+
+    @return (parseInt($value) / $ratio) * 1rem;
+}

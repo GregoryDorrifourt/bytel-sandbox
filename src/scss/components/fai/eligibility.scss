@@ -1,0 +1,30 @@
+.elig-title {
+	font-size: 1.5rem;
+	line-height: 1.5;
+	margin-top: 1rem;
+	text-align: center;
+
+	@include media-breakpoint-up(sm) {
+		font-size: 1.8rem;
+	}
+}
+
+.content {
+
+    @include make-col(12);
+
+    padding: 0 1rem;
+
+    @include media-breakpoint-up(sm) {
+        font-size: 1.6rem;
+    }
+    
+    @include media-breakpoint-up(lg) {
+
+        @include make-col(10);
+        @include make-col-offset(1);
+
+        padding-left: 6rem;
+        padding-right: 6rem;
+    }
+}

@@ -1,0 +1,44 @@
+<div class="container">
+
+    <div class="jumbotron">
+        <h1 class="display-3">SVG</h1>
+        <p class="lead">Liste des SVG utilisés sur le site dans le cadre de la migration. Cliquer sur un svg afin de le copier dans le presse-papier.</p>
+        <p class="lead"><strong>Filtrer par catégorie :</strong>
+            <select [(ngModel)]="currentCategory">
+                <option [ngValue]="'all'"> - Tous</option>
+                <option *ngFor="let category of svgData | keys" [ngValue]="category.key"> - {{category.key}}</option>
+            </select>
+        </p>
+    </div>
+    <!-- SVG -->
+    <div class="box">
+        <div class="alert alert-success notification-alert" *ngIf="copied">
+            Copié dans le presse-papier avec succes !
+        </div>
+
+        <div class="row box-content">
+            <div class="col-12">
+                <div *ngFor="let category of svgData | keys">
+                    <div class="row svg-category" *ngIf="currentCategory == category.key || currentCategory == 'all'">
+                        <div class="col-12 category-header" data-toggle="collapse">
+                            <h3>{{category.key+'-defs'}}</h3>
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-3 icon-showcase" *ngFor="let icon of category.value | keys" (click)="copyIcon(icon.value, category.key)" placement="top" ngbTooltip="Cliquer pour copier">
+                                    <i class="icon-item">
+                                        <span btlSvg [file]="category.key+'-defs'" [name]="'shape-'+icon.value.file" [class]="icon.value.class"></span>
+                                    </i>
+                                    <p>{{icon.value.file}}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>

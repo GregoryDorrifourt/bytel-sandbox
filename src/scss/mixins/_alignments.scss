@@ -1,0 +1,15 @@
+// Absolutely center vertically an element
+@mixin abs-vertical-center() {
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+// Absolutely center horizontally an element
+@mixin abs-horizontal-center() {
+
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}

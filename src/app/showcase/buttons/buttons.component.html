@@ -1,0 +1,84 @@
+
+<!-- BUTTONS -->
+<div class="box">
+    <div class="alert alert-success notification-alert" *ngIf="copied">
+        Copié dans le presse-papier avec succes !
+    </div>
+    <div class="row box-header justify-content-between">
+        <div class="col-auto">
+            <h2 class="box-title"><span class="anchor" id="buttons"></span>Boutons</h2>
+        </div>
+
+    </div>
+
+    <div class="row box-content">
+        <div class="col-12">
+            <div class="alert alert-info">
+                Liste des boutons du site et leurs déclinaisons.
+            </div>
+        </div>
+        <div class="col-12 buttons">
+            <div class="row align-items-center" *ngFor="let color of colors">
+                <div class="col-12">
+                    <h3>Couleur : {{color}}</h3>
+                    Classe <span class="showcase-code">.btn-{{color}}</span>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col dark showcase-state" *ngFor="let state of states">
+                            <button [class]="'btn btn-'+color+' '+state+' btn-block'">Valider</button>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col align-items-center" *ngFor="let state of states">
+                            <span *ngIf="state">+ <span class="showcase-code">{{state === '' ? '':state}}</span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <h3>Couleur : contrast</h3>
+                    <div class="alert alert-warning">
+                        Bouton à utiliser sur fond foncé
+                    </div>
+                </div>
+                <div class="col-4 darker">
+                    <button class="btn btn-default contrast btn-block">Valider</button>
+                </div>
+                <div class="col-8">
+                    Classe <span class="showcase-code">.btn-default</span><span class="showcase-code">.contrast</span>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-12">
+                    <h3>Tailles</h3>
+                </div>
+                <div class="col-12" *ngFor="let size of sizes">
+                    <div class="row">
+                        <div class="col-12">
+                            Classe <span class="showcase-code">.{{size}}</span>
+                        </div>
+                        <div class="col dark showcase-state" *ngFor="let state of states">
+                            <button [class]="'btn btn-primary '+size+' '+state+' btn-block'">Valider</button>
+                        </div>
+                        <div class="w-100"></div>
+                        <div class="col align-items-center" *ngFor="let state of states">
+                            <span *ngIf="state">+ <span class="showcase-code">{{state === '' ? '':state}}</span></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12">
+                            Classe <span class="showcase-code">.btn-block</span> + <span class="showcase-code">.btn-lg</span>
+                        </div>
+                        <div class="col dark showcase-state" >
+                            <button [class]="'btn btn-primary btn-lg btn-block'">Valider</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

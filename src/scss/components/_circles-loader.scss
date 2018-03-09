@@ -1,0 +1,87 @@
+@import "../bootstrap/scss/mixins/_breakpoints.scss";
+
+// [1] The 0.2 is to compensate the fact that xs start from zero and the default size must not be too small
+// without this the last size would be 0.8 instead of 1 which is considered 100%.
+
+.loaders-wrapper {
+
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    right: 0;
+
+    > * {
+
+        @each $color in $loader-colors-list {
+
+            // catch index
+            $index: index($loader-colors-list, $color);
+
+            &:nth-child(#{$index} ) {
+                animation: dotDance $loader-aniamtion-duration cubic-bezier(0.770, 0.100, 0.175, 1.000) infinite 0s alternate,
+                changeIndex 0.2s linear (($index * 1.4)*1s) infinite alternate;
+            }
+
+        }
+    }
+
+    // Sizes
+    @each $breakpoint in $grid-breakpoints {
+
+        $index: index($grid-breakpoints, $breakpoint);
+        $size-ratio: ($index / length($grid-breakpoints)) + 0.2; // [1]
+
+        &.size-#{nth($breakpoint, 1)} {
+
+            @include alignOnCirclePath($loader-count, $loader-wrapper-size, $loader-size);
+            transform: scale($index / length($grid-breakpoints));
+        }
+    }
+
+}
+
+.paused-loader {
+
+    .loader {
+        animation-play-state: paused;
+    }
+}
+
+.loader {
+
+    border-radius: $loader-radius;
+    display: inline-block;
+    height: $loader-size;
+    left: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    right: 0;
+    width: $loader-size;
+
+    @each $color in $loader-colors-list {
+
+        // catch index
+        $index: index($loader-colors-list, $color);
+
+        &:nth-child(#{$index} ) {
+            background: $color;
+        }
+    }
+
+}
+
+@keyframes dotDance {
+
+    0% {
+        transform: translate(0%) scale(0.7);
+    }
+}
+
+@keyframes changeIndex {
+
+    0%, 100% {
+        z-index: 2;
+    }
+}

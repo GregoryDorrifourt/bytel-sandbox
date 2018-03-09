@@ -1,0 +1,38 @@
+<div class="nav-wrapper">
+    <div class="container">
+        <nav class="row navbar navbar-expand-lg navbar-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Showcase</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/directives']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Directives</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/pipes']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Pipes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/svg']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">SVG</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/modals']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Modals</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/form']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Formulaire DAD</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/plans-wall']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Plans</a>
+                    </li>
+                    <li class="nav-item">
+                        <a [routerLink]="['/call-back']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Rappelez-moi</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+.nav-pagination {
+
+    margin-bottom: 5rem;
+    width: 100%;
+
+    /deep/ .icon {
+
+        cursor: pointer;
+        fill: $text-color;
+        height: 1.5rem;
+        width: 1.5rem;
+    }
+
+    .pagination {
+
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        overflow: hidden;
+
+        @include media-breakpoint-up(lg) {
+            justify-content: flex-end;
+        }
+
+        .link-page {
+
+            align-items: start;
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .link-previous {
+            margin-right: 1rem;
+        }
+
+        .link-next {
+            margin-left: 1rem;
+        }
+
+        .page-item {
+
+            cursor: pointer;
+            padding: 0 0.5rem;
+        }
+
+        .current {
+
+            &,
+            &:hover {
+                color: $brand-info;
+            }
+
+            font-weight: bold;
+        }
+    }
+
+}

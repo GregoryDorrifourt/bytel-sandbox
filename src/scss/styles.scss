@@ -1,0 +1,93 @@
+/* You can add global styles to this file, and also import other style files */
+// [1] used this to be able to use global BS style for isolated component style needs; ex: ng-boottsrap Typeahead
+// [2] make sure to include custom utils earlier since they are used on core variables overriden by custom.
+
+@import "font-face";
+@import "bootstrap/scss/bootstrap-reboot"; // Function and Variables are included here
+@import "utils/typography"; // [2]
+
+@import "custom";
+
+// loader
+@import "mixins/alignment-on-circle";
+@import "components/circles-loader";
+@import "components/action-feedback";
+
+
+@import "bootstrap/scss/tooltip";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/utilities/flex";
+@import "bootstrap/scss/transitions";
+@import "bootstrap/scss/media";
+
+// @import "bootstrap/scss/mixins";
+@import "bootstrap/scss/dropdown"; // [1]
+@import "bootstrap/scss/button-group";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/forms";
+@import "bootstrap/scss/modal";
+@import "~nouislider/distribute/nouislider.min.css";
+
+@media (max-width: 1439px) {
+    .container {
+        padding: 0;
+        max-width: inherit;
+    }
+}
+
+// Default styles for icon
+.icon {
+
+    fill: currentColor;
+    height: 6.4rem;
+    // transition: $transition-base;
+    width: 6.4rem;
+}
+
+// Set default behavior on all button in opposite to bs4
+.btn {
+    cursor: pointer;
+
+    @include media-breakpoint-down(sm) {
+        width: 100%;
+    }
+}
+
+// Cancel all bold font-weight on title tags
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: normal;
+}
+
+html {
+
+    font-size: $default-root-font-size;
+
+    body {
+        color: $text-color;
+    }
+
+}
+
+.no-gutter {
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.tooltip {
+
+    background-color: transparent;
+    width: 26rem;
+
+    .tooltip-inner {
+        border-radius: 0;
+        font-size: $font-size-base;
+        padding: 1.5rem;
+        text-align: left;
+    }
+
+}

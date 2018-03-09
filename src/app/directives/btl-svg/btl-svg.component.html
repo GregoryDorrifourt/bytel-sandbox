@@ -1,0 +1,63 @@
+<!-- COLORS AND BACKGROUND-->
+<div class="box">
+
+  <div class="alert alert-success notification-alert" *ngIf="copied">
+    Copié dans le presse-papier avec succes !
+  </div>
+
+  <div class="row box-header justify-content-between">
+    <div class="col-auto">
+      <h2 class="box-title"><span class="anchor" id="colors"></span>BtlSvg <span class="badge badge-danger">DIRECTIVE</span></h2>
+    </div>
+
+  </div>
+
+  <div class="row box-content">
+
+    <section class="col-12">
+      <table class="table table-bordered table-description">
+
+        <tbody>
+        <tr>
+          <th scope="row">Nom</th>
+          <td class="c-info">SvgDirectiveBase</td>
+        </tr>
+        <tr>
+          <th scope="row">Source</th>
+          <td class="c-info">src/baseBtl/base/directives/svg.directive.ts</td>
+        </tr>
+        <tr>
+          <th scope="row">Module</th>
+          <td class="c-info">BaseModule</td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="module-description">
+        <p>Directive servant à l'affichage des icones SVG.</p>
+      </div>
+    </section>
+
+    <section class="col-12">
+      <h3 class="title-description">Comment l'utiliser</h3>
+      <p>
+        Appliquer la directive <span class="showcase-code danger">btlSvg</span> à un <span class="showcase-code">&lt;span&gt;</span>. Elle doit être accompagnée d'attributs obligatoires qui sont :
+      </p>
+      <div class="w-100"></div>
+      <ul>
+        <li><span class="showcase-code primary">file</span> : <span class="badge badge-warning">string</span> : Nom du fichier SVG contenant l'icone que l'on souhaite afficher.</li>
+        <li><span class="showcase-code primary">name</span> : <span class="badge badge-warning">string</span> : Id de l'icone souhaitée.</li>
+        <li><span class="showcase-code primary">class</span> : <span class="badge badge-warning">string</span> : La classe globale <span class="showcase-code warning">icon</span>.</li>
+      </ul>
+      <div class="w-100"></div>
+      <p>
+        <strong>Exemple : </strong>
+        <span class="showcase-code">&lt;span <span class="directive">btlSvg</span> <span class="attr">file</span>=<span class="string">"<em>elig-tlv-defs</em>"</span> <span class="attr">name</span>=<span class="string">"<em>shape-icon-arrow-l</em>"</span> <span class="attr">class</span>=<span class="string">"icon <em>s-arrow-l</em>"</span>&gt;&lt;/span&gt;</span>
+      </p>
+    </section>
+    <section class="col-12">
+      <h3 class="title-description">Resources</h3>
+      <a class="link c-info lead" href="/svg">Consulter la liste des SVG triés par dossier.</a>
+    </section>
+
+  </div>
+</div>

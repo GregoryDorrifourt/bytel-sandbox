@@ -1,0 +1,31 @@
+
+@import '../../scss/bootstrap/scss/functions';
+@import '../../scss/bootstrap/scss/variables';
+@import '../../scss/custom';
+
+@import "../../scss/bootstrap/scss/mixins/_grid.scss";
+
+//[1] Even though these values look magical, there are just the exact values used on the template file.
+
+/deep/ .page-container {
+
+    @include make-row();
+
+    background: $white;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    min-height: 10rem;
+    width: 100%;
+
+    &-title {
+
+        @include make-col(12);
+        @include make-col-ready();
+
+        border-bottom: 1px solid $silver-mercury;
+        font-size: 1.8rem;
+        padding: 3.2rem 6rem 3.7rem; //[1]
+    }
+
+}

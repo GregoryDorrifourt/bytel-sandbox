@@ -1,0 +1,91 @@
+
+// [1] Used for block displayed on one line with full width
+
+.summary-info-blocks {
+
+    // @include make-row();
+
+    .summary-info-block {
+
+        margin-left: 1rem; // 7px rounded to 10px instead
+        margin-top: 1rem;
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        &.single { // [1]
+
+            margin-left: 0;
+            margin-right: 0;
+        }
+    }
+
+}
+
+.summary-info-block {
+
+    border-radius: 0.3rem;
+    display: flex;
+    flex-flow: row wrap;
+
+    .info-header,
+    .info-content {
+        flex: 1 0 100%;
+    }
+
+    .info-header {
+
+        align-content: center;
+        border-style: solid;
+        border-radius: 0.3rem 0.3rem 0 0;
+        border-width: 1px;
+        color: $white;
+        display: flex;
+        flex-flow: row nowrap;
+        margin-bottom: 0;
+        padding: 0.5rem 1.5rem;
+
+        .icon-item {
+
+            flex: 0 auto;
+            line-height: 1;
+        }
+
+        /deep/ .icon { //@TODO: Found out a way to adapt icon dimension and radio
+
+            height: 2.5rem;
+            width: 2.5rem;
+        }
+
+        &-title {
+
+            align-self: center;
+            flex: 0 1 auto;
+            font-size: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        // Themes
+        @each $theme, $color in $theme-colors {
+
+            &.#{$theme} {
+
+                background: $color;
+                border-color: $color;
+            }
+        }
+
+    }
+
+    .info-content {
+
+        background: $white;
+        border: 1px solid $alto;
+        border-radius: 0 0 0.3rem 0.3rem;
+        min-height: 10rem;
+        padding: 1rem 1.5rem;
+
+        // @NOTE: The content should be style on each component since it can be of any kind / type.
+    }
+}

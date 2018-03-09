@@ -1,0 +1,48 @@
+// Put items on circle
+/**
+ * Mixin to put items on a circle
+ * [1] - Allows children to be absolutely positioned
+ * [2] - Allows the mixin to be used on a list
+ * [3] - In case box-sizing: border-box has been enabled
+ * [4] - Allows any type of direct children to be targeted
+*/
+
+@mixin putOnCircle(
+    $nb-items, //Number of items
+    $circle-size, //Parent size
+    $item-size //Item size
+) {
+    $half-item: $item-size / 2;
+    $half-parent: $circle-size / 2;
+
+    position: relative; /* [1] */
+    width: $circle-size;
+    height: $circle-size;
+    padding: 0;
+    border-radius: 50%;
+    list-style: none; /* [2] */
+    box-sizing: content-box; /* [3] */
+
+    > * { /* [4] */
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: $item-size;
+        height: $item-size;
+        margin: -$half-item;
+
+        $angle: 360 / $nb-items;
+        $rot: 0;
+        @for $i from 1 to $nb-items+1 {
+
+            &:nth-of-type(#{$i}) {
+                // rotate is used twice to reset the element position: see this for more info http://dabblet.com/gist/3866686
+                transform: rotate(#{$rot}deg) translate($half-parent) rotate(-#{$rot}deg) scale(1);
+            }
+
+            $rot: $rot + $angle;
+        }
+    }
+
+}

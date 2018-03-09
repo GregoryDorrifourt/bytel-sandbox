@@ -1,0 +1,70 @@
+@import '../../scss/bootstrap/scss/functions';
+@import '../../scss/bootstrap/scss/variables';
+@import '../../scss/custom';
+
+
+
+.dad-form {
+
+    .title-form {
+
+        color: $text-color;
+        font-size: 2.1rem;
+        font-weight: 400;
+        margin: 3rem 0;
+        text-align: center;
+    }
+
+    .box {
+        margin-bottom: 2rem;
+
+        .box-header {
+
+            background-color: $white;
+            margin-bottom: .2rem;
+
+            .box-title {
+
+                color: $brand-info;
+                font-size: 2.1rem;
+                font-weight: 400;
+                margin: 0;
+                padding: 2rem 1rem;
+            }
+        }
+
+        .box-content {
+
+            background-color: $white;
+            padding: 2rem 0;
+        }
+
+        .form-check-label {
+            padding-left: 0;
+        }
+
+        .btn-group-dad {
+
+            margin-bottom: 0;
+            padding-bottom: 2rem;
+        }
+    }
+
+    .btn-info {
+        border-color: $silver-chalice;
+        color: $text-color;
+
+        &:hover,
+        &.active {
+            border-color: $brand-info;
+            color: $white;
+        }
+    }
+
+    .submit-dad {
+
+        .text {
+            font-size: $font-size-base;
+        }
+    }
+}

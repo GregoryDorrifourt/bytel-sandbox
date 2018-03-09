@@ -1,0 +1,65 @@
+
+// !Important: Content shouldn't be centered as seen on some templates.
+//[1] The $brand-warning color is used as default color despite the themes.
+
+.notice-feedback {
+
+    align-items: center;
+    border: 1px solid $brand-warning; //[1]
+    display: flex;
+    flex-flow: row nowrap;
+    margin: 2.5rem 0 0;
+    padding: 2rem 3rem;
+
+    .icon-item {
+        margin-right: 2.5rem;
+    }
+
+    .notice-title {
+
+        color: $brand-warning;
+        font-size: 1.6rem;
+    }
+
+    /deep/ .icon {
+
+        fill: $brand-warning;
+        height: 3.3rem;
+        width: 3.3rem;
+    }
+
+    .notice-infos {
+
+        align-self: center;
+        color: $silver-chalice;
+        font-size: 1.3rem;
+        flex-shrink: 1;
+        margin: 0;
+
+        .notice-info {
+            display: block;
+        }
+    }
+
+    .highlight {
+        font-weight: bold;
+    }
+
+    // Themes
+    @each $theme, $color in $theme-colors {
+
+        &.#{$theme} {
+
+            border-color: $color;
+
+            .notice-title {
+                color: $color;
+            }
+
+            /deep/ .icon {
+                fill: $color;
+            }
+        }
+    }
+
+}
