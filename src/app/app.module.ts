@@ -7,7 +7,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 /** Modules **/
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { BaseModule } from './base/base.module';
-import { DadModule } from './dad/dad.module';
 import { DirectivesModule } from "./directives/directives.module";
 import { PipesModule } from "./pipes/pipes.module";
 import { ShowcaseModule } from "./showcase/showcase.module";
@@ -36,7 +35,6 @@ import { PlansWallComponent } from './plans-wall/plans-wall.component';
         AppRoutingModule,
         BaseModule,
         BrowserModule,
-        DadModule,
         DirectivesModule,
         NgbModule.forRoot(),
         PipesModule,
