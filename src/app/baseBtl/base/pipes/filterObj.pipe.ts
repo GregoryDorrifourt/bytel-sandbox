@@ -17,9 +17,9 @@ export class FilterObjPipe implements PipeTransform {
                     let value : string = (caseSensitive)?item[key]:item[key].toUpperCase();
                     let filterValue : string = (caseSensitive)?filter[key]:filter[key].toUpperCase();
                     if ( ( !strict && typeof (strict) != 'object' ) || ( typeof (strict) == 'object' && !strict[key] ) ) {
-                        if ( value.indexOf (filter[key])==-1 && value != filter[key]) { return false; }
+                        if ( value.indexOf (filterValue)==-1 && value != filterValue) { return false; }
                     }else{
-                        if (value != filter[key] && filter[key]) { return false; }
+                        if (value != filterValue && filterValue) { return false; }
                     }
                 }
             }

@@ -13,6 +13,7 @@ $mine-shaft: lighten(#000, 20%) !default; // #333 old : $gray-dark
 $silver-chalice: #454545 !default; // #555
 $silver-nobel: #b5b5b5 !default; // #999
 $silver-mercury: #ececec !default; // #eee
+$silver-boulder: #7D7D7D;
 $alto: #dbdbdb !default;
 $alabaster: #f7f7f7 !default;
 $christine: #ea5b0c !default;
@@ -66,6 +67,7 @@ $font-family-sans-serif: 'open_sans_regular', Arial, sans-serif;
 $font-family-base: $font-family-sans-serif;
 $open-sans-bold: 'open_sans_bold', Arial, sans-serif !default;
 $open-sans-semibold: 'open_sans_semibold', Arial, sans-serif !default;
+$open-sans-light: 'open_sans_light', Arial, sans-serif !default;
 $font-size-sm: 0.75rem !default; // 12px
 $font-size-md: 1rem !default; // 16px
 
@@ -279,19 +281,19 @@ $legend-border-color: #e5e5e5 !default;
 //
 // Dropdown menu container and contents.
 
-$dropdown-min-width: fontSizeRoot(10rem);
-$dropdown-padding-y: fontSizeRoot(.5rem);
-$dropdown-spacer: fontSizeRoot(.125rem);
+$dropdown-min-width: rootFontSize(10rem);
+$dropdown-padding-y: rootFontSize(.5rem);
+$dropdown-spacer: rootFontSize(.125rem);
 
-$dropdown-box-shadow: 0 fontSizeRoot(.5rem) fontSizeRoot(1rem) rgba($black, .175);
+$dropdown-box-shadow: 0 rootFontSize(.5rem) rootFontSize(1rem) rgba($black, .175);
 
-$dropdown-item-padding-y: fontSizeRoot(.25rem);
-$dropdown-item-padding-x: fontSizeRoot(1.5rem);
+$dropdown-item-padding-y: rootFontSize(.25rem);
+$dropdown-item-padding-x: rootFontSize(1.5rem);
 
 // Navs
 
-$nav-link-padding-y: fontSizeRoot(.5rem);
-$nav-link-padding-x: fontSizeRoot(1rem);
+$nav-link-padding-y: rootFontSize(.5rem);
+$nav-link-padding-x: rootFontSize(1rem);
 
 // Navbar
 
