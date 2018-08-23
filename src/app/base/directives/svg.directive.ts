@@ -58,7 +58,7 @@ export class SvgDirective implements AfterViewInit {
             this.title = ' ';
         }
 
-        const xhref: string = `/assets/svgs-def/${this.file}.svg#${this.name}`;
+        const xhref: string = `./assets/svgs-def/${this.file}.svg#${this.name}`;
         nodeParent.innerHTML = `<svg role="${this.role}" title="${this.title}" class="${this.class}">
         <use xlink:href="${xhref}"></use></svg>`;
 

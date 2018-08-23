@@ -423,7 +423,7 @@ var SvgDirective = /** @class */ (function () {
         if (!this.title) {
             this.title = ' ';
         }
-        var xhref = "/assets/svgs-def/" + this.file + ".svg#" + this.name;
+        var xhref = "./assets/svgs-def/" + this.file + ".svg#" + this.name;
         nodeParent.innerHTML = "<svg role=\"" + this.role + "\" title=\"" + this.title + "\" class=\"" + this.class + "\">\n        <use xlink:href=\"" + xhref + "\"></use></svg>";
     };
     __decorate([
@@ -1919,7 +1919,7 @@ var SvgComponent = /** @class */ (function () {
     }
     SvgComponent.prototype.ngOnInit = function () {
         var _this = this;
-        this.httpSub = this.http.get('/assets/json/svg/svg.json').subscribe(function (data) {
+        this.httpSub = this.http.get('./assets/json/svg/svg.json').subscribe(function (data) {
             _this.svgData = data;
         });
     };

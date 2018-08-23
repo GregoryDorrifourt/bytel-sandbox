@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/GDORRIFO/.nvm/versions/node/v9.6.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js build
+  /Users/GDORRIFO/.nvm/versions/node/v9.6.0/bin/node /usr/local/Cellar/yarn/1.5.1/libexec/bin/yarn.js start
 
 PATH: 
   /Users/GDORRIFO/.nvm/versions/node/v9.6.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
@@ -7281,7 +7281,7 @@ Trace:
   Error: Command failed.
   Exit code: 1
   Command: sh
-  Arguments: -c ng build
+  Arguments: -c ng serve  --port=4204
   Directory: /Users/GDORRIFO/sites/bytel/boutique/doc/sandbox
   Output:
   

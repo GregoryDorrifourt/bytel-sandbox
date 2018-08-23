@@ -18,7 +18,7 @@ export class SvgComponent implements OnInit, OnDestroy {
 
     ngOnInit() {
 
-        this.httpSub = this.http.get('/assets/json/svg/svg.json').subscribe((data)=>{
+        this.httpSub = this.http.get('./assets/json/svg/svg.json').subscribe((data)=>{
             this.svgData = data;
         })
 
