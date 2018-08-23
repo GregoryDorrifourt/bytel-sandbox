@@ -6,8 +6,8 @@ Divers outils sont égalements disponibles tels que la selection rapide de svg (
 
 ## Installation
 
-Afin de fonctionner correctement, le repo doit obligatoirement installé dans boutique/doc/ et renommé sandbox, ceci afin que les liens symboliques pointent bien vers les bons dossiers/fichiers.
+Afin de fonctionner correctement, le repo doit obligatoirement installé dans `boutique/doc/` et renommé sandbox, ceci afin que les liens symboliques pointent bien vers les bons dossiers/fichiers.
 
-Pour installer toutes les dépendances : yarn install
+Pour installer toutes les dépendances : `yarn install`
 
-Pour lancer le serveur : yarn start
+Pour lancer le serveur : `yarn start`
