@@ -13,23 +13,14 @@ import { CirclesLoaderComponent } from '../directives/circles-loader/circles-loa
 import { PipesComponent } from '../pipes/pipes.component';
 import { BtlSvgComponent } from '../directives/btl-svg/btl-svg.component';
 import {CurrencyComponent} from '../pipes/currency/currency.component';
+import {ComponentsComponent} from "../components/components.component";
+import {BtlPriceDemoComponent} from "../components/btl-price/btl-price-demo.component";
+import {PageTitleDemoComponent} from "../components/page-title/page-title-demo.component";
 
 const routes: Routes = [
     {
-        path: 'call-back',
-        component: CallBackComponent
-    },
-    {
-        path: 'modals',
-        component: ModalsComponent
-    },
-    {
         path: 'svg',
         component: SvgComponent
-    },
-    {
-        path: 'plans-wall',
-        component: PlansWallComponent
     },
     {
         path: 'directives',
@@ -62,6 +53,25 @@ const routes: Routes = [
             {
                 path: 'currency',
                 component: CurrencyComponent
+            }
+        ]
+    },
+    {
+        path: 'components',
+        component: ComponentsComponent,
+        children: [
+            {
+                path: '',
+                redirectTo: 'btl-price',
+                pathMatch: 'full'
+            },
+            {
+                path: 'btl-price',
+                component: BtlPriceDemoComponent
+            },
+            {
+                path: 'page-title',
+                component: PageTitleDemoComponent
             }
         ]
     },

@@ -1,0 +1,15 @@
+<div id="top" class="container">
+  <div class="jumbotron">
+    <h1 class="display-3">Components</h1>
+    <p class="lead">Components.</p>
+    <hr class="my-4">
+    <p>
+      <a [routerLink]="['btl-price']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}" class="link">BtlPriceComponent</a> |
+      <a [routerLink]="['page-title']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}" class="link">PageTitleComponent</a>
+    </p>
+  </div>
+</div>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

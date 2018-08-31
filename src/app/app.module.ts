@@ -11,6 +11,7 @@ import { DirectivesModule } from "./directives/directives.module";
 import { PipesModule } from "./pipes/pipes.module";
 import { ShowcaseModule } from "./showcase/showcase.module";
 import { SvgModule } from "./svg/svg.module";
+import { ComponentsModule } from "./components/components.module";
 
 /** Components **/
 import { AppComponent } from './app.component';
@@ -36,6 +37,7 @@ import { PlansWallComponent } from './plans-wall/plans-wall.component';
         BaseModule,
         BrowserModule,
         DirectivesModule,
+        ComponentsModule,
         NgbModule.forRoot(),
         PipesModule,
         ShowcaseModule,
