@@ -12,7 +12,7 @@ Une fois le repo chargé, la derniere version buildée est accessible via l'url 
 
 ## Contributeur
 
-Pour installer toutes les dépendances : `yarn install`
+Pour installer toutes les dépendances : `yarn install --offline`
 
 Pour lancer le serveur : `yarn start`
 
