@@ -1,0 +1,208 @@
+@import '../../../../scss/bootstrap/scss/functions';
+@import '../../../../scss/bootstrap/scss/variables';
+@import '../../../../scss/custom';
+@import '../../../../scss/mixins/vertical-align';
+
+// [1] Makes sure the regular price odesn't take too much space vertically
+// [2] This is made to avoid default value for flex-basis
+// [3] Moved this block below to avoid rule cascading overrides since the themes colors has the same specificity number
+// [4] Makes sure the element inherit from the parent instead of overriding it
+// [5] I used em here to adapt with font-size
+/deep/ .product-price-container {
+
+    display: inline-flex; //@TODO: Find out how to center inline-flex element
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+/deep/ .product-price {
+
+    align-items: stretch;
+    display: flex;
+    flex: 1 0 auto;
+    flex-flow: row nowrap;
+    font-family: $open-sans-semibold;
+    font-size: 20px; //Default font-size
+    justify-content: center;
+    line-height: 0.7; //[1]
+    position: relative;
+
+    // Common
+    .regular,
+    .old,
+    .cents,
+    .conditions {
+
+        flex-basis: auto; //[2]
+        flex-grow: 1;
+        margin: 0;
+    }
+
+    .old,
+    .cents,
+    .conditions {
+        flex-shrink: 1;
+    }
+
+    .regular,
+    .cents .amount,
+    .cents .monthly,
+    .conditions {
+
+        color: $brand-primary;
+    }
+
+    // End of Common
+
+    .regular {
+
+        flex-shrink: 0;
+        font-size: 100%;
+    }
+
+    .cents {
+
+        display: flex;
+        flex-flow: column nowrap;
+        font-size: inherit;
+        justify-content: space-between;
+        line-height: 0.7;
+
+        .amount {
+
+            align-self: flex-start;
+            font-size: 50%;
+        }
+
+        .monthly {
+
+            // align-self: flex-end;
+            font-family: $font-family-sans-serif;
+            font-size: 30%;
+        }
+    }
+
+    .inline-price & {
+
+        .cents .amount {
+            font-size: 100%;
+        }
+    }
+
+    .conditions {
+        font-size: 40%;
+    }
+
+    // Theming
+    $theme-list: (
+            'primary':   $brand-primary,
+            'secondary': $brand-secondary,
+            'regular':   $body-color,
+            'info':      $brand-info,
+            'success':   $brand-success,
+            'pro':       $brand-pro,
+            'byou-b':    $brand-byou-b,
+            'byou-y':    $brand-byou-y,
+            'byou-o':    $brand-byou-o,
+            'byou-u':    $brand-byou-u,
+            'light':     $white
+    );
+
+    @each $theme, $color in $theme-list {
+
+        /deep/ .clr-#{$theme} & {
+
+            .regular,
+            .cents .amount,
+            .cents .monthly,
+            .conditions {
+                color: $color;
+            }
+        }
+    }
+
+    // [3]
+    .old {
+
+        // margin-right: 5px;
+        position: absolute;
+
+        &.pos-right { //[5]
+
+            left: auto;
+            right: -1em;
+            top: -0.2em;
+        }
+
+        &.pos-left { //[5]
+
+            left: -1.1em;
+            right: auto;
+        }
+
+        &.pos-top { //[5]
+
+            left: auto;
+            right: auto;
+            top: -0.5em;
+        }
+
+        .regular,
+        .cents .amount {
+            color: $silver-chalice;
+        }
+
+        .regular {
+
+            font-family: $font-family-sans-serif;
+            font-size: 35%;
+        }
+        .cents .amount {
+            font-size: 25%;
+        }
+
+        &.pos-old-price { //[5]
+
+             left: auto;
+             right: -2.4em;
+             top: 0.2em;
+
+             .regular {
+                 font-size: 65%;
+             }
+             .cents .amount {
+                 font-size: 55%;
+             }
+         }
+
+
+        // Strike decoration
+        .product-price {
+
+            font-size: inherit; //[4]
+            position: relative;
+
+            &::after {
+
+                @include vertical-align(true);
+
+                background: $silver-chalice;
+                content: '';
+                height: 0.1rem;
+                left: 0;
+                transform: rotate(-15deg) translateY(-50%);
+                width: 110%;
+
+            }
+        }
+    }
+
+}
+
+.price-duration {
+
+    color: $silver-chalice;
+    flex: 1 0 100%;
+    font-size: 1.2rem;
+    margin: 0;
+}

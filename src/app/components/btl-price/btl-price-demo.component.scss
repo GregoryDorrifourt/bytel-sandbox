@@ -1,0 +1,16 @@
+@import "../components.component";
+
+/deep/
+.demo {
+    .product-price {
+        font-size: 10rem;
+    }
+}
+
+.showcase {
+
+    align-items: center;
+    display: flex;
+    flex-flow: row nowrap;
+    height: 13rem;
+}

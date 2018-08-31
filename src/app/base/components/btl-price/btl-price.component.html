@@ -1,0 +1,17 @@
+<section class="product-price-container">
+    <div class="product-price">
+        <div class="old pos-{{position}}" *ngIf="(promoPrice && showPromoPrice) || oldPrice">
+            <div class="product-price">
+                <p class="regular">{{ oldPriceFormatted[0] }}</p>
+                <p class="cents">
+                    <span class="amount">€{{ oldPriceFormatted[1] }}</span>
+                </p>
+            </div>
+        </div>
+        <p class="regular">{{ priceFormatted[0] }}</p>
+        <p class="cents">
+            <span class="amount">€{{ priceFormatted[1] }}</span>
+            <span class="monthly" *ngIf="monthly">/mois</span>
+        </p>
+    </div>
+</section>
