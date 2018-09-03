@@ -1,6 +1,12 @@
 @import '../../scss/bootstrap/scss/functions';
 @import '../../scss/bootstrap/scss/variables';
 @import '../../scss/custom';
+@import '../../scss/bootstrap/scss/mixins/breakpoints';
+@import '../../scss/bootstrap/scss/mixins/text-truncate';
+@import '../../scss/bootstrap/scss/mixins/text-emphasis';
+@import '../../scss/bootstrap/scss/mixins/hover';
+@import '../../scss/bootstrap/scss/mixins/text-hide';
+@import '../../scss/bootstrap/scss/utilities/text';
 
 .notification-alert {
 
