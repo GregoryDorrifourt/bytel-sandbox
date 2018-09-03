@@ -1,6 +1,9 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { HttpClient } from "@angular/common/http";
-import { CopyToClipboardService } from "../base/services/copy-to-clipboard.service";
+import { HttpClient } from '@angular/common/http';
+import { CopyToClipboardService } from '../base/services/copy-to-clipboard.service';
+import { HelperService } from '../base/services/helper.service';
+import { forkJoin, pipe, of } from 'rxjs';
+import { tap, map, catchError } from 'rxjs/operators';
 
 @Component({
     selector: 'app-svg',
@@ -9,35 +12,51 @@ import { CopyToClipboardService } from "../base/services/copy-to-clipboard.servi
 })
 export class SvgComponent implements OnInit, OnDestroy {
 
-    svgData: Object;
-    httpSub;
-    copied: Boolean = false;
-    currentCategory:string = 'all';
+    public svgData: Object = {};
+    public svgDataNew: {[key: string]: any} = {};
+    public copied: Boolean = false;
+    public currentCategory: string = 'all';
 
-    constructor(private http: HttpClient, private ctc: CopyToClipboardService) { }
+    constructor(private http$: HttpClient, private ctc: CopyToClipboardService) { }
 
     ngOnInit() {
 
-        this.httpSub = this.http.get('./assets/json/svg/svg.json').subscribe((data)=>{
-            this.svgData = data;
-        })
-
+        forkJoin(
+            // @TODO: How to catch errors
+            this.http$.get('../../gulp/svg.json'),
+            this.http$.get('../../gulp/tlv-svg.json'),
+            this.http$.get('../../gulp/web-svg.json')
+        ).subscribe((data) => {
+            const canals = ['web', 'angular2_web', 'angular2_telesales'];
+            for (const canal in data) {
+                if (data[canal]) {
+                    this.svgData[canals[canal]] = data[canal];
+                }
+            }
+        });
     }
 
-    copyIcon(data, category){
-        let str = '<i class="icon-item">\n'+
-                        '<span btlSvg file="'+category+'-defs" name="shape-'+data.file+'" class="'+data.class+'"></span>\n'+
-                    '</i>';
-        this.ctc.copy(str).then(()=>{
+    copyIcon(data, category) {
+        const str = `<i class='icon-item">
+                        <span btlSvg file="${category}-defs" name="shape-${data.file}" class="${data.class}"></span>
+                    </i>`;
+        this.ctc.copy(str).then(() => {
             this.copied = true;
             setTimeout(() => {
                 this.copied = false;
             }, 2000);
-        })
+        });
     }
 
-    ngOnDestroy() {
-        this.httpSub.unsubscribe();
+    sizeOf(object: {[key: string]: any}) {
+        return HelperService.sizeOf(object);
     }
+
+    unCamelString(key: string) {
+        // return key;
+        return key.replace('_', ' ');
+    }
+
+    ngOnDestroy() {}
 
 }

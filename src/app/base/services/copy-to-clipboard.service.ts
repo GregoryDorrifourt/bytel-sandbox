@@ -1,5 +1,5 @@
 import { Inject, Injectable } from '@angular/core';
-import { DOCUMENT } from "@angular/common";
+import { DOCUMENT } from '@angular/common';
 
 
 @Injectable()
@@ -19,7 +19,7 @@ export class CopyToClipboardService {
     // resolves to the given value on success or rejects with the raised Error.
     public copy( value: string ) {
 
-        let promise = new Promise(( resolve, reject ) : void => {
+        const promise = new Promise(( resolve, reject ): void => {
 
             let textarea = null;
 
@@ -31,23 +31,23 @@ export class CopyToClipboardService {
                 // force a selection.
                 // --
                 // NOTE: This Textarea is being rendered off-screen.
-                textarea = this.document.createElement( "textarea" );
-                textarea.style.height = "0px";
-                textarea.style.left = "-100px";
-                textarea.style.opacity = "0";
-                textarea.style.position = "fixed";
-                textarea.style.top = "-100px";
-                textarea.style.width = "0px";
-                this.document.body.appendChild(textarea );
+                textarea = this.document.createElement('textarea');
+                textarea.style.height = '0px';
+                textarea.style.left = '-100px';
+                textarea.style.opacity = '0';
+                textarea.style.position = 'fixed';
+                textarea.style.top = '-100px';
+                textarea.style.width = '0px';
+                this.document.body.appendChild(textarea);
 
                 // Set and select the value (creating an active Selection range).
                 textarea.value = value;
                 textarea.select();
 
                 // Ask the browser to copy the current selection to the clipboard.
-                this.document.execCommand( "copy" );
+                this.document.execCommand('copy');
 
-                resolve( value );
+                resolve(value);
 
             } finally {
 
@@ -60,7 +60,7 @@ export class CopyToClipboardService {
 
         });
 
-        return( promise );
+        return(promise);
 
     }
 

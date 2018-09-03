@@ -9,9 +9,9 @@ import { DirectivesComponent } from '../directives/directives.component';
 import { CirclesLoaderComponent } from '../directives/circles-loader/circles-loader.component';
 import { PipesComponent } from '../pipes/pipes.component';
 import { BtlSvgComponent } from '../directives/btl-svg/btl-svg.component';
-import {CurrencyComponent} from '../pipes/currency/currency.component';
-import {ComponentsComponent} from "../components/components.component";
-import {BtlPriceDemoComponent} from "../components/btl-price/btl-price-demo.component";
+import { CurrencyComponent } from '../pipes/currency/currency.component';
+import { ComponentsComponent } from '../components/components.component';
+import { BtlPriceDemoComponent } from '../components/btl-price/btl-price-demo.component';
 
 const routes: Routes = [
     {
@@ -107,4 +107,4 @@ const routes: Routes = [
     declarations: []
 })
 
-export class AppRoutingModule { }
+export class AppRoutingModule {}

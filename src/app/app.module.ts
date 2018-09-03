@@ -7,11 +7,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 /** Modules **/
 import { AppRoutingModule } from './app-routing/app-routing.module';
 import { BaseModule } from './base/base.module';
-import { DirectivesModule } from "./directives/directives.module";
-import { PipesModule } from "./pipes/pipes.module";
-import { ShowcaseModule } from "./showcase/showcase.module";
-import { SvgModule } from "./svg/svg.module";
-import { ComponentsModule } from "./components/components.module";
+import { DirectivesModule } from './directives/directives.module';
+import { PipesModule } from './pipes/pipes.module';
+import { ShowcaseModule } from './showcase/showcase.module';
+import { SvgModule } from './svg/svg.module';
+import { ComponentsModule } from './components/components.module';
 
 /** Components **/
 import { AppComponent } from './app.component';

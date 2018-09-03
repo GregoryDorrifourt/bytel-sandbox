@@ -4,9 +4,9 @@
         <h1 class="display-3">SVG</h1>
         <p class="lead">Liste des SVG utilisés sur le site dans le cadre de la migration. Cliquer sur un svg afin de le copier dans le presse-papier.</p>
         <p class="lead"><strong>Filtrer par catégorie :</strong>
-            <select [(ngModel)]="currentCategory">
-                <option [ngValue]="'all'"> - Tous</option>
-                <option *ngFor="let category of svgData | keys" [ngValue]="category.key"> - {{category.key}}</option>
+            <select [(ngModel)]="currentCategory" *ngIf="sizeOf(svgData)">
+                <option [ngValue]="'all'">Tous</option>
+                <option *ngFor="let category of svgData | keys" [ngValue]="category.key">{{unCamelString(category.key)}}</option>
             </select>
         </p>
     </div>

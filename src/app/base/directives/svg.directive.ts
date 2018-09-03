@@ -50,11 +50,11 @@ export class SvgDirective implements AfterViewInit {
         const nodeParent = this.el.nativeElement.parentNode;
         nodeParent.removeChild(this.el.nativeElement);
 
-        if(!this.role) {
+        if (!this.role) {
             this.role = 'img';
         }
 
-        if(!this.title) {
+        if (!this.title) {
             this.title = ' ';
         }
 

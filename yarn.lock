@@ -5246,7 +5246,17 @@ run-queue@^1.0.0, run-queue@^1.0.3:
   dependencies:
     aproba "^1.1.1"
 
-rxjs@^5.5.2, rxjs@^5.5.6:
+rxjs-compat@6:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/rxjs-compat/-/rxjs-compat-6.3.1.tgz#9ad8a76110bb0f37fa7906be377909970135b909"
+
+rxjs@6:
+  version "6.3.1"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-6.3.1.tgz#878a1a8c64b8a5da11dcf74b5033fe944cdafb84"
+  dependencies:
+    tslib "^1.9.0"
+
+rxjs@^5.5.6:
   version "5.5.11"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.11.tgz#f733027ca43e3bec6b994473be4ab98ad43ced87"
   dependencies:
