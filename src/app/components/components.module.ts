@@ -9,7 +9,6 @@ import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { ComponentsComponent } from "./components.component";
 import { BtlPriceDemoComponent } from './btl-price/btl-price-demo.component';
-import { PageTitleDemoComponent } from './page-title/page-title-demo.component';
 
 @NgModule({
     imports: [
@@ -20,6 +19,9 @@ import { PageTitleDemoComponent } from './page-title/page-title-demo.component';
         BrowserModule,
         HttpClientModule
     ],
-    declarations: [ComponentsComponent, BtlPriceDemoComponent, PageTitleDemoComponent]
+    declarations: [
+        ComponentsComponent,
+        BtlPriceDemoComponent
+    ]
 })
 export class ComponentsModule { }

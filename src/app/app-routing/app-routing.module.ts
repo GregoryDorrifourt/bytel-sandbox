@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { PlansWallComponent } from '../plans-wall/plans-wall.component';
-import { ModalsComponent } from '../modals/modals.component';
-import { CallBackComponent } from '../call-back/call-back.component';
 import { ShowcaseComponent } from '../showcase/showcase.component';
 import { SvgComponent } from '../svg/svg.component';
 import { FormsComponent } from '../showcase/forms/forms.component';
@@ -15,7 +12,6 @@ import { BtlSvgComponent } from '../directives/btl-svg/btl-svg.component';
 import {CurrencyComponent} from '../pipes/currency/currency.component';
 import {ComponentsComponent} from "../components/components.component";
 import {BtlPriceDemoComponent} from "../components/btl-price/btl-price-demo.component";
-import {PageTitleDemoComponent} from "../components/page-title/page-title-demo.component";
 
 const routes: Routes = [
     {
@@ -68,10 +64,6 @@ const routes: Routes = [
             {
                 path: 'btl-price',
                 component: BtlPriceDemoComponent
-            },
-            {
-                path: 'page-title',
-                component: PageTitleDemoComponent
             }
         ]
     },

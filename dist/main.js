@@ -47,14 +47,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pipes_currency_currency_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../pipes/currency/currency.component */ "./src/app/pipes/currency/currency.component.ts");
 /* harmony import */ var _components_components_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../components/components.component */ "./src/app/components/components.component.ts");
 /* harmony import */ var _components_btl_price_btl_price_demo_component__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../components/btl-price/btl-price-demo.component */ "./src/app/components/btl-price/btl-price-demo.component.ts");
-/* harmony import */ var _components_page_title_page_title_demo_component__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../components/page-title/page-title-demo.component */ "./src/app/components/page-title/page-title-demo.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -120,10 +118,6 @@ var routes = [
             {
                 path: 'btl-price',
                 component: _components_btl_price_btl_price_demo_component__WEBPACK_IMPORTED_MODULE_13__["BtlPriceDemoComponent"]
-            },
-            {
-                path: 'page-title',
-                component: _components_page_title_page_title_demo_component__WEBPACK_IMPORTED_MODULE_14__["PageTitleDemoComponent"]
             }
         ]
     },
@@ -1037,7 +1031,7 @@ var BtlPriceDemoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div id=\"top\" class=\"container\">\n  <div class=\"jumbotron\">\n    <h1 class=\"display-3\">Components</h1>\n    <p class=\"lead\">Components.</p>\n    <hr class=\"my-4\">\n    <p>\n      <a [routerLink]=\"['btl-price']\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:false}\" class=\"link\">BtlPriceComponent</a> |\n      <a [routerLink]=\"['page-title']\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:false}\" class=\"link\">PageTitleComponent</a>\n    </p>\n  </div>\n</div>\n\n<div class=\"container\">\n  <router-outlet></router-outlet>\n</div>\n"
+module.exports = "<div id=\"top\" class=\"container\">\n  <div class=\"jumbotron\">\n    <h1 class=\"display-3\">Components</h1>\n    <p class=\"lead\">Components.</p>\n    <hr class=\"my-4\">\n    <p>\n      <a [routerLink]=\"['btl-price']\" [routerLinkActive]=\"['active']\" [routerLinkActiveOptions]=\"{exact:false}\" class=\"link\">BtlPriceComponent</a>\n    </p>\n  </div>\n</div>\n\n<div class=\"container\">\n  <router-outlet></router-outlet>\n</div>\n"
 
 /***/ }),
 
@@ -1112,14 +1106,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _ng_bootstrap_ng_bootstrap__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @ng-bootstrap/ng-bootstrap */ "./node_modules/@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var _components_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components.component */ "./src/app/components/components.component.ts");
 /* harmony import */ var _btl_price_btl_price_demo_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./btl-price/btl-price-demo.component */ "./src/app/components/btl-price/btl-price-demo.component.ts");
-/* harmony import */ var _page_title_page_title_demo_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./page-title/page-title-demo.component */ "./src/app/components/page-title/page-title-demo.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-
 
 
 
@@ -1142,73 +1134,13 @@ var ComponentsModule = /** @class */ (function () {
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_4__["BrowserModule"],
                 _angular_common_http__WEBPACK_IMPORTED_MODULE_5__["HttpClientModule"]
             ],
-            declarations: [_components_component__WEBPACK_IMPORTED_MODULE_7__["ComponentsComponent"], _btl_price_btl_price_demo_component__WEBPACK_IMPORTED_MODULE_8__["BtlPriceDemoComponent"], _page_title_page_title_demo_component__WEBPACK_IMPORTED_MODULE_9__["PageTitleDemoComponent"]]
+            declarations: [
+                _components_component__WEBPACK_IMPORTED_MODULE_7__["ComponentsComponent"],
+                _btl_price_btl_price_demo_component__WEBPACK_IMPORTED_MODULE_8__["BtlPriceDemoComponent"]
+            ]
         })
     ], ComponentsModule);
     return ComponentsModule;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/app/components/page-title/page-title-demo.component.html":
-/*!**********************************************************************!*\
-  !*** ./src/app/components/page-title/page-title-demo.component.html ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "<!-- COLORS AND BACKGROUND-->\n<div class=\"box\">\n\n  <div class=\"alert alert-success notification-alert\" *ngIf=\"copied\">\n    Copié dans le presse-papier avec succes !\n  </div>\n\n  <div class=\"row box-header justify-content-between\">\n    <div class=\"col-auto\">\n      <h2 class=\"box-title\"><span class=\"anchor\" id=\"colors\"></span>CirclesLoader <span class=\"badge badge-success\">COMPONENT</span></h2>\n    </div>\n\n  </div>\n\n  <div class=\"row box-content\">\n\n    <section class=\"col-12\">\n\n      <table class=\"table table-bordered table-description\">\n\n        <tbody>\n        <tr>\n          <th scope=\"row\">Nom</th>\n          <td class=\"c-info\">CirclesLoaderDirective</td>\n        </tr>\n        <tr>\n          <th scope=\"row\">Source</th>\n          <td class=\"c-info\">src/baseBtl/base/directives/circles-loader.directive.ts</td>\n        </tr>\n        <tr>\n          <th scope=\"row\">Module</th>\n          <td class=\"c-info\">BaseModule</td>\n        </tr>\n        </tbody>\n      </table>\n      <div class=\"module-description\">\n        <p>Loader coloré de base du site.</p>\n      </div>\n    </section>\n\n    <section class=\"col-12\">\n      <h3 class=\"title-description\">Démonstration</h3>\n      <div class=\"showcase text-align-center\">\n        <div circlesLoader [size]=\"'lg'\" class=\"text-align-center\"></div>\n      </div>\n    </section>\n\n    <section class=\"col-12\">\n      <h3 class=\"title-description\">Comment l'utiliser</h3>\n      <p>\n        Appliquer la directive <span class=\"showcase-code danger\">circlesLoader</span> à un container : <span class=\"showcase-code\">&lt;div <span class=\"directive\">circlesLoader</span> <span class=\"attr\">[size]</span>=<span class=\"string\">\"'lg'\"</span>&gt;&lt;/div&gt;</span>.\n      </p>\n      <p>\n        Cette directive accepte en paramètre l'attribut <span class=\"showcase-code primary\">[size]</span> permettant de changer la taille du loader (par défaut à <span class=\"showcase-code warning\">'xs'</span>).\n      </p>\n      <table class=\"table table-bordered table-description\">\n        <tbody>\n        <tr>\n          <th scope=\"row\">Size <span class=\"showcase-code primary\">[size]</span><br><em class=\"type\">string</em></th>\n          <td *ngFor=\"let size of sizes\" class=\"text-align-center\">{{size}}</td>\n        </tr>\n        <tr>\n          <th scope=\"row\">Résultat :</th>\n          <td *ngFor=\"let size of sizes\" class=\"text-align-center\">\n            <div circlesLoader [size]=\"size\"></div>\n          </td>\n        </tr>\n        <tr>\n          <th scope=\"row\">Cliquer pour copier :</th>\n          <td *ngFor=\"let size of sizes\" class=\"text-align-center\">\n            <button role=\"button\" (click)=\"copyToClipboard(size)\" class=\"btn btn-primary\">Copier en taille '{{size}}'</button>\n          </td>\n        </tr>\n        </tbody>\n      </table>\n    </section>\n\n  </div>\n</div>"
-
-/***/ }),
-
-/***/ "./src/app/components/page-title/page-title-demo.component.scss":
-/*!**********************************************************************!*\
-  !*** ./src/app/components/page-title/page-title-demo.component.scss ***!
-  \**********************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-module.exports = "/* Spacing converted to fit font size base\n * All values below are imported from default BS variables\n * ==================================== */\n.w-25 {\n  width: 25% !important; }\n.w-50 {\n  width: 50% !important; }\n.w-75 {\n  width: 75% !important; }\n.w-100 {\n  width: 100% !important; }\n.h-25 {\n  height: 25% !important; }\n.h-50 {\n  height: 50% !important; }\n.h-75 {\n  height: 75% !important; }\n.h-100 {\n  height: 100% !important; }\n.mw-100 {\n  max-width: 100% !important; }\n.mh-100 {\n  max-height: 100% !important; }\n.table {\n  width: 100%;\n  max-width: 100%;\n  margin-bottom: rootFontSize(1rem);\n  background-color: transparent; }\n.table th,\n  .table td {\n    padding: 0.75rem;\n    vertical-align: top;\n    border-top: 1px solid #dee2e6; }\n.table thead th {\n    vertical-align: bottom;\n    border-bottom: 2px solid #dee2e6; }\n.table tbody + tbody {\n    border-top: 2px solid #dee2e6; }\n.table .table {\n    background-color: #fff; }\n.table-sm th,\n.table-sm td {\n  padding: 0.3rem; }\n.table-bordered {\n  border: 1px solid #dee2e6; }\n.table-bordered th,\n  .table-bordered td {\n    border: 1px solid #dee2e6; }\n.table-bordered thead th,\n  .table-bordered thead td {\n    border-bottom-width: 2px; }\n.table-striped tbody tr:nth-of-type(odd) {\n  background-color: rgba(0, 0, 0, 0.05); }\n.table-hover tbody tr:hover {\n  background-color: rgba(0, 0, 0, 0.075); }\n.table-default,\n.table-default > th,\n.table-default > td {\n  background-color: #cbcbcb; }\n.table-hover .table-default:hover {\n  background-color: #bebebe; }\n.table-hover .table-default:hover > td,\n  .table-hover .table-default:hover > th {\n    background-color: #bebebe; }\n.table-primary,\n.table-primary > th,\n.table-primary > td {\n  background-color: #f0b8da; }\n.table-hover .table-primary:hover {\n  background-color: #eca3cf; }\n.table-hover .table-primary:hover > td,\n  .table-hover .table-primary:hover > th {\n    background-color: #eca3cf; }\n.table-secondary,\n.table-secondary > th,\n.table-secondary > td {\n  background-color: #b8cfe6; }\n.table-hover .table-secondary:hover {\n  background-color: #a5c2df; }\n.table-hover .table-secondary:hover > td,\n  .table-hover .table-secondary:hover > th {\n    background-color: #a5c2df; }\n.table-success,\n.table-success > th,\n.table-success > td {\n  background-color: #b9f2e6; }\n.table-hover .table-success:hover {\n  background-color: #a3eede; }\n.table-hover .table-success:hover > td,\n  .table-hover .table-success:hover > th {\n    background-color: #a3eede; }\n.table-info,\n.table-info > th,\n.table-info > td {\n  background-color: #b8e4f1; }\n.table-hover .table-info:hover {\n  background-color: #a3dced; }\n.table-hover .table-info:hover > td,\n  .table-hover .table-info:hover > th {\n    background-color: #a3dced; }\n.table-warning,\n.table-warning > th,\n.table-warning > td {\n  background-color: #ffe2d4; }\n.table-hover .table-warning:hover {\n  background-color: #ffd1bb; }\n.table-hover .table-warning:hover > td,\n  .table-hover .table-warning:hover > th {\n    background-color: #ffd1bb; }\n.table-danger,\n.table-danger > th,\n.table-danger > td {\n  background-color: #feb8cd; }\n.table-hover .table-danger:hover {\n  background-color: #fe9fbb; }\n.table-hover .table-danger:hover > td,\n  .table-hover .table-danger:hover > th {\n    background-color: #fe9fbb; }\n.table-light,\n.table-light > th,\n.table-light > td {\n  background-color: #fdfdfe; }\n.table-hover .table-light:hover {\n  background-color: #ececf6; }\n.table-hover .table-light:hover > td,\n  .table-hover .table-light:hover > th {\n    background-color: #ececf6; }\n.table-dark,\n.table-dark > th,\n.table-dark > td {\n  background-color: #c6c8ca; }\n.table-hover .table-dark:hover {\n  background-color: #b9bbbe; }\n.table-hover .table-dark:hover > td,\n  .table-hover .table-dark:hover > th {\n    background-color: #b9bbbe; }\n.table-blue,\n.table-blue > th,\n.table-blue > td {\n  background-color: #b8dded; }\n.table-hover .table-blue:hover {\n  background-color: #a4d3e8; }\n.table-hover .table-blue:hover > td,\n  .table-hover .table-blue:hover > th {\n    background-color: #a4d3e8; }\n.table-active,\n.table-active > th,\n.table-active > td {\n  background-color: rgba(0, 0, 0, 0.075); }\n.table-hover .table-active:hover {\n  background-color: rgba(0, 0, 0, 0.075); }\n.table-hover .table-active:hover > td,\n  .table-hover .table-active:hover > th {\n    background-color: rgba(0, 0, 0, 0.075); }\n.table .thead-dark th {\n  color: #fff;\n  background-color: #212529;\n  border-color: #32383e; }\n.table .thead-light th {\n  color: #495057;\n  background-color: #e9ecef;\n  border-color: #dee2e6; }\n.table-dark {\n  color: #fff;\n  background-color: #212529; }\n.table-dark th,\n  .table-dark td,\n  .table-dark thead th {\n    border-color: #32383e; }\n.table-dark.table-bordered {\n    border: 0; }\n.table-dark.table-striped tbody tr:nth-of-type(odd) {\n    background-color: rgba(255, 255, 255, 0.05); }\n.table-dark.table-hover tbody tr:hover {\n    background-color: rgba(255, 255, 255, 0.075); }\n@media (max-width: 575.98px) {\n  .table-responsive-sm {\n    display: block;\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    -ms-overflow-style: -ms-autohiding-scrollbar; }\n    .table-responsive-sm > .table-bordered {\n      border: 0; } }\n@media (max-width: 767.98px) {\n  .table-responsive-md {\n    display: block;\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    -ms-overflow-style: -ms-autohiding-scrollbar; }\n    .table-responsive-md > .table-bordered {\n      border: 0; } }\n@media (max-width: 991.98px) {\n  .table-responsive-lg {\n    display: block;\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    -ms-overflow-style: -ms-autohiding-scrollbar; }\n    .table-responsive-lg > .table-bordered {\n      border: 0; } }\n@media (max-width: 1199.98px) {\n  .table-responsive-xl {\n    display: block;\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    -ms-overflow-style: -ms-autohiding-scrollbar; }\n    .table-responsive-xl > .table-bordered {\n      border: 0; } }\n@media (max-width: 1439.98px) {\n  .table-responsive-xlg {\n    display: block;\n    width: 100%;\n    overflow-x: auto;\n    -webkit-overflow-scrolling: touch;\n    -ms-overflow-style: -ms-autohiding-scrollbar; }\n    .table-responsive-xlg > .table-bordered {\n      border: 0; } }\n.table-responsive {\n  display: block;\n  width: 100%;\n  overflow-x: auto;\n  -webkit-overflow-scrolling: touch;\n  -ms-overflow-style: -ms-autohiding-scrollbar; }\n.table-responsive > .table-bordered {\n    border: 0; }\n.showcase {\n  align-items: baseline;\n  display: flex;\n  justify-content: center;\n  width: 100%; }\n.text-align-center {\n  text-align: center; }\n"
-
-/***/ }),
-
-/***/ "./src/app/components/page-title/page-title-demo.component.ts":
-/*!********************************************************************!*\
-  !*** ./src/app/components/page-title/page-title-demo.component.ts ***!
-  \********************************************************************/
-/*! exports provided: PageTitleDemoComponent */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PageTitleDemoComponent", function() { return PageTitleDemoComponent; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/esm5/core.js");
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (undefined && undefined.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-var PageTitleDemoComponent = /** @class */ (function () {
-    function PageTitleDemoComponent() {
-    }
-    PageTitleDemoComponent.prototype.ngOnInit = function () {
-    };
-    PageTitleDemoComponent = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
-            selector: 'app-page-title',
-            template: __webpack_require__(/*! ./page-title-demo.component.html */ "./src/app/components/page-title/page-title-demo.component.html"),
-            styles: [__webpack_require__(/*! ./page-title-demo.component.scss */ "./src/app/components/page-title/page-title-demo.component.scss")]
-        }),
-        __metadata("design:paramtypes", [])
-    ], PageTitleDemoComponent);
-    return PageTitleDemoComponent;
 }());
 
 
