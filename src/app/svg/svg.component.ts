@@ -16,10 +16,11 @@ export class SvgComponent implements OnInit, OnDestroy {
     public svgDataNew: {[key: string]: any} = {};
     public copied: Boolean = false;
     public currentCategory: string = 'all';
+    public currentCategoryPage: string = '';
 
     constructor(private http$: HttpClient, private ctc: CopyToClipboardService) { }
 
-    ngOnInit() {
+    public ngOnInit() {
 
         forkJoin(
             // @TODO: How to catch errors
@@ -33,10 +34,11 @@ export class SvgComponent implements OnInit, OnDestroy {
                     this.svgData[canals[canal]] = data[canal];
                 }
             }
+            console.log(data);
         });
     }
-
-    copyIcon(data, category) {
+    // @TODO: Replace with native function
+    private copyIcon(data, category) {
         const str = `<i class='icon-item">
                         <span btlSvg file="${category}-defs" name="shape-${data.file}" class="${data.class}"></span>
                     </i>`;
@@ -48,15 +50,14 @@ export class SvgComponent implements OnInit, OnDestroy {
         });
     }
 
-    sizeOf(object: {[key: string]: any}) {
+    public sizeOf(object: {[key: string]: any}): number {
         return HelperService.sizeOf(object);
     }
 
-    unCamelString(key: string) {
-        // return key;
+    public unCamelString(key: string) {
         return key.replace('_', ' ');
     }
 
-    ngOnDestroy() {}
+    public ngOnDestroy() {}
 
 }

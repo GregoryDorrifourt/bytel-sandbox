@@ -17,7 +17,7 @@ export class HelperService {
         'MOBILE_PHONE_NUMBER': /^0[6-7]{1}[0-9]{8}$/
     };
 
-    public static sizeOf(object: Object) {
+    public static sizeOf(object: Object): number {
         if (!object) {
             return 0;
         }
