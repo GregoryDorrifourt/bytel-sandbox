@@ -8,8 +8,6 @@ Divers outils sont égalements disponibles tels que la selection rapide de svg (
 
 Afin de fonctionner correctement, le repo doit obligatoirement installé dans `boutique/doc/` et renommé sandbox, ceci afin que les liens symboliques pointent bien vers les bons dossiers/fichiers.
 
-Une fois le repo chargé, la derniere version buildée est accessible via l'url : http://local.bouyguestelecom.fr/doc/sandbox/dist/
-
 ## Contributeur
 
 Pour installer toutes les dépendances : `yarn install --offline`
