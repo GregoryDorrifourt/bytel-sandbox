@@ -2305,7 +2305,7 @@ var SvgComponent = /** @class */ (function () {
         this.buildForm();
         Object(rxjs__WEBPACK_IMPORTED_MODULE_4__["forkJoin"])(
         // @TODO: How to catch errors
-        this.http$.get('../../gulp/svg.json'), this.http$.get('../../gulp/web-svg.json'), this.http$.get('../../gulp/tlv-svg.json')).subscribe(function (data) {
+        this.http$.get('/doc/sandbox/gulp/svg.json'), this.http$.get('/doc/sandbox/gulp/web-svg.json'), this.http$.get('/doc/sandbox/gulp/tlv-svg.json')).subscribe(function (data) {
             var canals = ['web', 'angular2_web', 'angular2_telesales'];
             for (var canal in data) {
                 if (data[canal]) {

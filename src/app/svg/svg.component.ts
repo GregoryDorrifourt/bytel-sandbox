@@ -26,9 +26,9 @@ export class SvgComponent implements OnInit, OnDestroy {
 
         forkJoin(
             // @TODO: How to catch errors
-            this.http$.get('../../gulp/svg.json'),
-            this.http$.get('../../gulp/web-svg.json'),
-            this.http$.get('../../gulp/tlv-svg.json')
+            this.http$.get('/doc/sandbox/gulp/svg.json'),
+            this.http$.get('/doc/sandbox/gulp/web-svg.json'),
+            this.http$.get('/doc/sandbox/gulp/tlv-svg.json')
         ).subscribe((data) => {
             const canals = ['web', 'angular2_web', 'angular2_telesales'];
             for (const canal in data) {
