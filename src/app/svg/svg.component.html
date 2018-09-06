@@ -34,7 +34,7 @@
                         </div>
                         <div class="col-12" *ngIf="svgData[sortByCanal.value.category][sortByCanal.value.page]">
                             <div class="row">
-                                <div class="col-3 icon-showcase" *ngFor="let category of svgData[sortByCanal.value.category][sortByCanal.value.page] | keys" (click)="copyIcon(icon.value, category.value.key)" placement="top" ngbTooltip="Cliquer pour copier">
+                                <div class="col-3 icon-showcase" *ngFor="let category of svgData[sortByCanal.value.category][sortByCanal.value.page] | keys" (click)="copyIcon(category.value, sortByCanal.value.page)" placement="top" ngbTooltip="Cliquer pour copier">
                                     <i class="icon-item">
                                         <span btlSvg [defsFolder]="sortByCanal.value.category" [file]="sortByCanal.value.page+'-defs'" [name]="'shape-'+category.value.file" [class]="category.value.class"></span>
                                     </i>
