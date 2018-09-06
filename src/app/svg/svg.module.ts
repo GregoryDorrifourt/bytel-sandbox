@@ -1,17 +1,18 @@
 import { NgModule } from '@angular/core';
-import { BaseModule } from "../base/base.module";
+import { BaseModule } from '../base/base.module';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { SvgComponent } from "./svg.component";
+import { SvgComponent } from './svg.component';
 
 @NgModule({
     imports: [
         BaseModule,
         CommonModule,
         FormsModule,
+        ReactiveFormsModule,
         NgbModule
     ],
     declarations: [

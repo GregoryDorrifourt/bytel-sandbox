@@ -4,6 +4,7 @@ import { CopyToClipboardService } from '../base/services/copy-to-clipboard.servi
 import { HelperService } from '../base/services/helper.service';
 import { forkJoin, pipe, of } from 'rxjs';
 import { tap, map, catchError } from 'rxjs/operators';
+import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 
 @Component({
     selector: 'app-svg',
@@ -15,18 +16,19 @@ export class SvgComponent implements OnInit, OnDestroy {
     public svgData: Object = {};
     public svgDataNew: {[key: string]: any} = {};
     public copied: Boolean = false;
-    public currentCategory: string = 'all';
-    public currentCategoryPage: string = '';
+    public sortByCanal: FormGroup;
 
-    constructor(private http$: HttpClient, private ctc: CopyToClipboardService) { }
+    constructor(private http$: HttpClient, private ctc: CopyToClipboardService, private frb: FormBuilder) { }
 
     public ngOnInit() {
+
+        this.buildForm();
 
         forkJoin(
             // @TODO: How to catch errors
             this.http$.get('../../gulp/svg.json'),
-            this.http$.get('../../gulp/tlv-svg.json'),
-            this.http$.get('../../gulp/web-svg.json')
+            this.http$.get('../../gulp/web-svg.json'),
+            this.http$.get('../../gulp/tlv-svg.json')
         ).subscribe((data) => {
             const canals = ['web', 'angular2_web', 'angular2_telesales'];
             for (const canal in data) {
@@ -34,7 +36,23 @@ export class SvgComponent implements OnInit, OnDestroy {
                     this.svgData[canals[canal]] = data[canal];
                 }
             }
-            console.log(data);
+            this.sortByCanal.controls['category'].setValue(canals[0]);
+            this.sortByCanal.controls['page'].setValue( Object.keys(this.svgData[canals[0]])[0] );
+        });
+    }
+
+    private buildForm() {
+
+        this.sortByCanal = this.frb.group({
+            category: [],
+            page: []
+        });
+
+        this.sortByCanal.controls['category'].valueChanges.subscribe((category) => {
+
+            if (this.svgData[category]) {
+                this.sortByCanal.controls['page'].setValue( Object.keys(this.svgData[category])[0] );
+            }
         });
     }
     // @TODO: Replace with native function
@@ -50,6 +68,13 @@ export class SvgComponent implements OnInit, OnDestroy {
         });
     }
 
+    /**
+     *
+     *
+     * @param {{[key: string]: any}} object
+     * @returns {number}
+     * @memberof SvgComponent
+     */
     public sizeOf(object: {[key: string]: any}): number {
         return HelperService.sizeOf(object);
     }

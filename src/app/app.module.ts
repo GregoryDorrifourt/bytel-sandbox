@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 /** Third Party Modules **/
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -38,6 +39,8 @@ import { PlansWallComponent } from './plans-wall/plans-wall.component';
         BrowserModule,
         DirectivesModule,
         ComponentsModule,
+        ReactiveFormsModule,
+        FormsModule,
         NgbModule.forRoot(),
         PipesModule,
         ShowcaseModule,

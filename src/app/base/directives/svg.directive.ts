@@ -34,6 +34,12 @@ export class SvgDirective implements AfterViewInit {
      */
     @Input()
     public class: string;
+    /**
+     * [Input description]
+     * @return {[defsFolder]} [description]
+     */
+    @Input()
+    public defsFolder: string = '';
 
     /**
      *
@@ -58,7 +64,7 @@ export class SvgDirective implements AfterViewInit {
             this.title = ' ';
         }
 
-        const xhref: string = `./assets/svgs-def/${this.file}.svg#${this.name}`;
+        const xhref: string = `./assets/svgs-def/${this.defsFolder}/${this.file}.svg#${this.name}`;
         nodeParent.innerHTML = `<svg role="${this.role}" title="${this.title}" class="${this.class}">
         <use xlink:href="${xhref}"></use></svg>`;
 
