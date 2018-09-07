@@ -14,4 +14,4 @@ Pour installer toutes les dépendances : `yarn install --offline`
 
 Pour lancer le serveur : `yarn start`
 
-Pour builder une version accessible via l'url spécifiée plus haut : `yarn build --base-href /doc/sandbox/dist/`
+Pour builder une version accessible via l'url spécifiée plus haut : `yarn build --base-href /doc/sandbox/`
