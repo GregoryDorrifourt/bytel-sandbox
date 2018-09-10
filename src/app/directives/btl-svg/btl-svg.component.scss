@@ -1,1 +1,19 @@
 @import "../directives.component";
+
+.demo {
+
+    text-align: center;
+    width: 100%;
+
+    .icon-item {
+
+        width: 100%;
+
+        /deep/
+        .icon {
+            width: 30rem;
+        }
+    }
+
+
+}
