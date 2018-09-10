@@ -22,13 +22,14 @@ export class SvgComponent implements OnInit, OnDestroy {
 
     public ngOnInit() {
 
+        const baseHref: string = '/doc/sandbox/assets/gulp';
         this.buildForm();
 
         forkJoin(
             // @TODO: How to catch errors
-            this.http$.get('/doc/sandbox/gulp/svg.json'),
-            this.http$.get('/doc/sandbox/gulp/web-svg.json'),
-            this.http$.get('/doc/sandbox/gulp/tlv-svg.json')
+            this.http$.get(`${baseHref}/svg.json`),
+            this.http$.get(`${baseHref}/web-svg.json`),
+            this.http$.get(`${baseHref}/tlv-svg.json`)
         ).subscribe((data) => {
             const canals = ['web', 'angular2_web', 'angular2_telesales'];
             for (const canal in data) {
