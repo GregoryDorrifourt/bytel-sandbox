@@ -1,6 +1,17 @@
-<div class="container">
 
-    <div class="jumbotron">
+<!-- SVG -->
+<div class="box">
+    <div class="alert alert-success notification-alert" *ngIf="copied">
+        Copié dans le presse-papier avec succes !
+    </div>
+    <div class="box-header justify-content-between">
+        <div class="col-auto">
+            <h2 class="box-title">Liste des SVG</h2>
+        </div>
+
+    </div>
+
+    <div class="box-content">
         <form action="" name="" [formGroup]="sortByCanal" novalidate>
             <h1 class="display-3">SVG</h1>
             <p class="lead">Liste des SVG utilisés sur le site dans le cadre de la migration. Cliquer sur un svg afin de le copier dans le presse-papier.</p>
@@ -19,33 +30,27 @@
             <!-- @TODO: Add search feature -->
         </form>
     </div>
-    <!-- SVG -->
-    <div class="box">
-        <div class="alert alert-success notification-alert" *ngIf="copied">
-            Copié dans le presse-papier avec succes !
-        </div>
 
-        <div class="row box-content">
-            <div class="col-12">
-                <ng-container *ngIf="sizeOf(svgData) > 0 && sortByCanal.value.category">
-                    <div class="row svg-category">
-                        <div class="col-12 category-header" data-toggle="collapse">
-                            <h3>Page: {{sortByCanal.value.page}}</h3>
-                        </div>
-                        <div class="col-12" *ngIf="svgData[sortByCanal.value.category][sortByCanal.value.page]">
-                            <div class="row">
-                                <div class="col-3 icon-showcase" *ngFor="let category of svgData[sortByCanal.value.category][sortByCanal.value.page] | keys" (click)="copyIcon(category.value, sortByCanal.value.page)" placement="top" ngbTooltip="Cliquer pour copier">
-                                    <i class="icon-item">
-                                        <span btlSvg [defsFolder]="sortByCanal.value.category" [file]="sortByCanal.value.page+'-defs'" [name]="'shape-'+category.value.file" [class]="category.value.class"></span>
-                                    </i>
-                                    <p [innerHTML]="category.value.file"></p>
-                                </div>
+    <div class="box-content">
+        <div class="col-12">
+            <ng-container *ngIf="sizeOf(svgData) > 0 && sortByCanal.value.category">
+                <div class="row svg-category">
+                    <div class="col-12 category-header" data-toggle="collapse">
+                        <h3>Page: {{sortByCanal.value.page}}</h3>
+                    </div>
+                    <div class="col-12" *ngIf="svgData[sortByCanal.value.category][sortByCanal.value.page]">
+                        <div class="row">
+                            <div class="col-3 icon-showcase" *ngFor="let category of svgData[sortByCanal.value.category][sortByCanal.value.page] | keys" (click)="copyIcon(category.value, sortByCanal.value.page)" placement="top" ngbTooltip="Cliquer pour copier">
+                                <i class="icon-item">
+                                    <span btlSvg [defsFolder]="sortByCanal.value.category" [file]="sortByCanal.value.page+'-defs'" [name]="'shape-'+category.value.file" [class]="category.value.class"></span>
+                                </i>
+                                <p [innerHTML]="category.value.file"></p>
                             </div>
                         </div>
                     </div>
-                </ng-container>
-            </div>
+                </div>
+            </ng-container>
         </div>
-
     </div>
+
 </div>

@@ -18,6 +18,14 @@
         flex-flow: row nowrap;
         align-items: stretch;
     }
+
+    .aside {
+        width: 30rem;
+    }
+
+    .content {
+        width: calc(100% - 30rem);
+    }
 }
 
 .footer {
