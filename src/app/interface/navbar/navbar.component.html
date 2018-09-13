@@ -1,29 +1,49 @@
-<div class="nav-wrapper">
-    <div class="container">
-        <nav class="row navbar navbar-expand-lg navbar-light">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+<nav class="nav">
+     <h2>Documentation</h2>
 
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Showcase</a>
-                    </li>
-                    <li class="nav-item">
-                        <a [routerLink]="['/directives']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Directives</a>
-                    </li>
-                    <li class="nav-item">
-                        <a [routerLink]="['/pipes']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Pipes</a>
-                    </li>
-                    <li class="nav-item">
-                        <a [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Components</a>
-                    </li>
-                    <li class="nav-item">
-                        <a [routerLink]="['/svg']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">SVG</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </div>
-</div>
+    <ul class="">
+        <li>
+            <h3>Composants CSS</h3>
+            <ul>
+                <li class="nav-item active">
+                    <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Showcase</a>
+                </li>
+            </ul>
+        </li>
+
+        <li>
+            <h3>Angular</h3>
+            <ul>
+                <li class="nav-item">
+                    <a [routerLink]="['/directives']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Directives</a>
+                    <ul>
+                        <li>
+                            <a [routerLink]="['/directives/btl-svg']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">BtlSvg</a>
+                        </li>
+                        <li class="nav-item">
+                            <a [routerLink]="['/directives/circles-loader']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">CirclesLoader</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Components</a>
+
+                    <ul>
+                        <li>
+                            <a [routerLink]="['/components/btl-price']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">BtlPriceComponent</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <h3>Outils</h3>
+            <ul>
+                <li class="nav-item">
+                    <a [routerLink]="['/svg']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">SVG</a>
+                </li>
+            </ul>
+        </li>
+
+    </ul>
+</nav>

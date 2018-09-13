@@ -24,7 +24,7 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                redirectTo: 'circles-loader',
+                redirectTo: 'btl-svg',
                 pathMatch: 'full'
             },
             {

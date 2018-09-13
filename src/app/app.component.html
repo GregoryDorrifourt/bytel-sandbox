@@ -1,12 +1,14 @@
-<header class="header">
-    <app-header></app-header>
+<header class="header sticky-top">
+    <sb-header></sb-header>
 </header>
-<div class="sticky-top">
-    <app-navbar></app-navbar>
-</div>
-<section class="content">
-    <router-outlet></router-outlet>
-</section>
+<main role="main" class="main-wrapper">
+    <aside>
+        <sb-navbar></sb-navbar>
+    </aside>
+    <section class="content">
+        <router-outlet></router-outlet>
+    </section>
+</main>
 <footer class="footer">
-    <app-footer></app-footer>
+    <sb-footer></sb-footer>
 </footer>
