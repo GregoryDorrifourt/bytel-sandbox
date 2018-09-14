@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CopyToClipboardService } from "../../base/services/copy-to-clipboard.service";
 
 @Component({
-    selector: 'app-circles-loader',
+    selector: 'sb-circles-loader',
     templateUrl: './circles-loader.component.html',
     styleUrls: ['./circles-loader.component.scss']
 })

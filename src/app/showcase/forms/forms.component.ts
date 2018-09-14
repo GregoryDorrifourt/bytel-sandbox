@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-    selector: 'app-forms',
+    selector: 'sb-forms',
     templateUrl: './forms.component.html',
     styleUrls: ['../showcase.component.scss']
 })

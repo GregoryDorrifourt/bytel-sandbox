@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-currency',
+  selector: 'sb-currency',
   templateUrl: './currency.component.html',
   styleUrls: ['./currency.component.scss']
 })

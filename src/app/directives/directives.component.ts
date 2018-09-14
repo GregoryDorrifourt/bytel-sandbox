@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-directives',
+  selector: 'sb-directives',
   templateUrl: './directives.component.html',
   styleUrls: ['./directives.component.scss']
 })

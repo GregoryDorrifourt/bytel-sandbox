@@ -7,7 +7,7 @@ import { tap, map, catchError } from 'rxjs/operators';
 import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 
 @Component({
-    selector: 'app-svg',
+    selector: 'sb-svg',
     templateUrl: './svg.component.html',
     styleUrls: ['./svg.component.scss']
 })

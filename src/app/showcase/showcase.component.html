@@ -1,17 +1,2 @@
-<div id="top" class="container">
-    <div class="jumbotron">
-        <h1 class="display-3">Showcase</h1>
-        <p class="lead">Petit espace pour montrer les différents composants créés/brandés et la façon de les utiliser.<br>
-            <a class="link" target="_blank" href="https://getbootstrap.com/docs/4.0/getting-started/introduction/">Aller sur le site de Bootstrap</a></p>
-        <hr class="my-4">
-        <p>
-            <a [routerLink]="['buttons']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}" class="link">Boutons</a> |
-            <a [routerLink]="['forms']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}" class="link">Formulaires</a> |
-            <a [routerLink]="['misc']" [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}" class="link">Divers</a>
-        </p>
-    </div>
-</div>
-
-<div class="container">
-    <router-outlet></router-outlet>
-</div>
+<sb-buttons></sb-buttons>
+<sb-forms></sb-forms>

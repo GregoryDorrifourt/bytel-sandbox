@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-call-back',
+  selector: 'sb-call-back',
   templateUrl: './call-back.component.html',
   styleUrls: ['./call-back.component.scss']
 })

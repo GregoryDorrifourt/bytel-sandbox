@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-btl-svg',
+  selector: 'sb-btl-svg',
   templateUrl: './btl-svg.component.html',
   styleUrls: ['./btl-svg.component.scss']
 })
