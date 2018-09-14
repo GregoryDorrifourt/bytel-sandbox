@@ -23,6 +23,11 @@ const routes: Routes = [
         component: DirectivesComponent,
         children: [
             {
+                path: '',
+                redirectTo: 'btl-svg',
+                pathMatch: 'full'
+            },
+            {
                 path: 'circles-loader',
                 component: CirclesLoaderComponent
             },
