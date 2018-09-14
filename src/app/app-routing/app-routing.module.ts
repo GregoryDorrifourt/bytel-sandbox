@@ -92,7 +92,7 @@ const routes: Routes = [
     },
     {
         path: '',
-        redirectTo: 'showcase',
+        redirectTo: 'directives',
         pathMatch: 'full'
     },
 ];
