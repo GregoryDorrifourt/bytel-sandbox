@@ -22,7 +22,7 @@ export class SvgComponent implements OnInit, OnDestroy {
 
     public ngOnInit() {
 
-        const baseHref: string = '/doc/sandbox/assets/gulp';
+        const baseHref: string = '/assets/gulp';
         this.buildForm();
 
         forkJoin(
