@@ -55,6 +55,10 @@ html {
 
 .box-header {
   margin-bottom: .2rem;
+    position: sticky;
+    top: 4.6rem;
+    z-index: 1;
+    border-bottom: 2px solid $fade-grey;
 }
 
 .showcase-code {
@@ -174,7 +178,6 @@ pre {
     }
 
     color: $silver-chalice;
-    margin-bottom: 3rem;
 
     .box-header {
 
@@ -211,6 +214,9 @@ pre {
                 }
             }
         }
+    }
+    &+.box {
+        margin-top: 3rem;
     }
 }
 

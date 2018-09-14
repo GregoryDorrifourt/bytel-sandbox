@@ -1,19 +1,35 @@
 @import '../scss/bootstrap/scss/functions';
 @import '../scss/bootstrap/scss/variables';
+@import '../scss/bootstrap/scss/mixins/breakpoints';
 @import '../scss/custom';
 
 .header {
-
+    background-color: $white;
+    border-bottom: 1px solid $fade-grey;
 }
-.content {
+.main-wrapper {
 
-  background-color: #ececec;
-  min-height: 50rem;
-  padding-bottom: 2rem;
+    background-color: #ececec;
+    min-height: 50rem;
+
+    @include media-breakpoint-up(lg){
+        display: flex;
+        flex: 1 0 auto;
+        flex-flow: row nowrap;
+        align-items: stretch;
+    }
+
+    .aside {
+        width: 30rem;
+    }
+
+    .content {
+        width: calc(100% - 30rem);
+    }
 }
 
 .footer {
 
-  border-top: $silver-nobel .1rem solid;
-  padding: 1rem;
+    border-top: $silver-nobel .1rem solid;
+    padding: 1rem;
 }

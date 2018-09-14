@@ -4,21 +4,10 @@
 @import '../../../scss/custom';
 
 @import "../../../scss/bootstrap/scss/mixins";
-@import "../../../scss/bootstrap/scss/navbar";
 
+.nav {
 
-.nav-wrapper{
-
-    background-color: $brand-info;
-    padding: .5rem 0;
-
-    .nav-link {
-        border: transparent .1rem solid;
-        color: $white !important;
-        padding: 0 1rem;
-
-        &.router-link-active {
-            border: $white .1rem solid
-        }
-    }
+    padding: 1rem;
+    position: sticky;
+    top: 4.6rem;
 }

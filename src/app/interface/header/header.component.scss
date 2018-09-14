@@ -1,8 +1,14 @@
 .title-wrapper {
 
-    padding: 1rem 0;
+    height: 4.5rem;
+    overflow: hidden;
+    padding: 0.5rem 0 .5rem 3rem;
+    display: flex;
+    flex: 1 0 auto;
+    flex-flow: row ;
 
     .title {
+        font-size: 2rem;
         margin-left: 1rem;
     }
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-showcase',
+  selector: 'sb-showcase',
   templateUrl: './showcase.component.html',
   styleUrls: ['./showcase.component.scss']
 })

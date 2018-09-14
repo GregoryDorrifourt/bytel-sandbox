@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-pipes',
+  selector: 'sb-pipes',
   templateUrl: './pipes.component.html',
   styleUrls: ['./pipes.component.scss']
 })
