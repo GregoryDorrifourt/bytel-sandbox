@@ -6,7 +6,7 @@ Divers outils sont égalements disponibles tels que la selection rapide de svg (
 
 ## Installation
 
-Afin de fonctionner correctement, le repo doit obligatoirement installé dans `boutique/doc/` et renommé `sandbox-dev`, ceci afin que les liens symboliques pointent bien vers les bons dossiers/fichiers.
+Afin de fonctionner correctement, le repo doit obligatoirement installé dans `bytel/docs/` et renommé `sandbox-dev`, ceci afin que les liens symboliques pointent bien vers les bons dossiers/fichiers.
 
 ## Contributeur
 
