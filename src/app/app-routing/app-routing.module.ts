@@ -7,13 +7,16 @@ import { ButtonsComponent } from '../showcase/buttons/buttons.component';
 import { MiscellaneousComponent } from '../showcase/miscellaneous/miscellaneous.component';
 import { DirectivesComponent } from '../directives/directives.component';
 import { CirclesLoaderComponent } from '../directives/circles-loader/circles-loader.component';
-import { PipesComponent } from '../pipes/pipes.component';
 import { BtlSvgComponent } from '../directives/btl-svg/btl-svg.component';
-import { CurrencyComponent } from '../pipes/currency/currency.component';
 import { ComponentsComponent } from '../components/components.component';
 import { BtlPriceDemoComponent } from '../components/btl-price/btl-price-demo.component';
 
 const routes: Routes = [
+    {
+        path: '',
+        redirectTo: 'directives',
+        pathMatch: 'full'
+    },
     {
         path: 'svg',
         component: SvgComponent
@@ -38,21 +41,6 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'pipes',
-        component: PipesComponent,
-        children: [
-            {
-                path: '',
-                redirectTo: 'currency',
-                pathMatch: 'full'
-            },
-            {
-                path: 'currency',
-                component: CurrencyComponent
-            }
-        ]
-    },
-    {
         path: 'components',
         component: ComponentsComponent,
         children: [
@@ -69,12 +57,10 @@ const routes: Routes = [
     },
     {
         path: 'showcase',
-        component: ShowcaseComponent,
         children: [
             {
                 path: '',
-                redirectTo: 'buttons',
-                pathMatch: 'full'
+                component: ShowcaseComponent,
             },
             {
                 path: 'buttons',
@@ -91,10 +77,9 @@ const routes: Routes = [
         ]
     },
     {
-        path: '',
-        redirectTo: 'directives',
-        pathMatch: 'full'
-    },
+        path: '**',
+        redirectTo: 'directives'
+    }
 ];
 
 @NgModule({

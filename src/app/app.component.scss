@@ -17,14 +17,15 @@
         flex: 1 0 auto;
         flex-flow: row nowrap;
         align-items: stretch;
-    }
 
-    .aside {
-        width: 30rem;
-    }
 
-    .content {
-        width: calc(100% - 30rem);
+        .aside {
+            width: 30rem;
+        }
+
+        .content {
+            width: calc(100% - 30rem);
+        }
     }
 }
 

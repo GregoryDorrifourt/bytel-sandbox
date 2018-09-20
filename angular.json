@@ -128,11 +128,11 @@
   "defaultProject": "sandbox",
   "schematics": {
     "@schematics/angular:component": {
-      "prefix": "app",
+      "prefix": "sb",
       "styleext": "scss"
     },
     "@schematics/angular:directive": {
-      "prefix": "app"
+      "prefix": "sb"
     }
   }
 }
