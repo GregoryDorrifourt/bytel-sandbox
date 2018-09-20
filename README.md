@@ -12,6 +12,8 @@ Afin de fonctionner correctement, le repo doit obligatoirement installé dans `b
 
 Pour installer toutes les dépendances : `yarn install --offline`
 
-Pour lancer le serveur : `yarn start`
+Pour lancer le serveur : `yarn start -o`
 
-Pour builder une version accessible via l'url spécifiée plus haut : `yarn build --base-href /doc/sandbox/`
+Pour builder une version accessible via l'url spécifiée plus haut : `yarn build --prod`
+
+Une fois le build complété, ne pas oublier de commit les fichiers sur le repo de la boutique.
