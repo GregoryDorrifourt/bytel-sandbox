@@ -1,31 +1,67 @@
-<nav class="nav">
-    <h2>Documentation</h2>
+<!-- Search -->
+<form class="form-search">
+    <label class="sr-only">Recherche...</label>
+    <input class="form-control form-control-lg" type="search" placeholder="Recherche..." aria-label="Search">
+</form>
 
-    <ul>
-        <li>
-            <h3>Composants CSS</h3>
-            <ul>
-                <li class="nav-item active">
-                    <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Showcase</a>
+<nav class="nav-vertical">
+    <h2 class="title-section">Documentation</h2>
+
+    <ul class="feature-wrapper">
+
+        <li class="feature-item" (click)="setSectionKey('component-css')">
+
+            <h3 class="title-item" [ngClass]="{'expanded': getSectionKey() === 'component-css'}">
+                <span>Composants CSS</span>
+
+                <i class="icon-item">
+                    <span btlSvg defsFolder="web" file="cart-defs" name="shape-icon-arrow-r" class="icon s-arrow-r"></span>
+                </i>
+            </h3>
+
+            <ul class="sub-feature" [ngClass]="{'expanded': getSectionKey() === 'component-css'}">
+
+                <li class="sub-item">
+                    <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Boutons</a>
+                </li>
+
+                <li class="sub-item">
+                    <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Formulaires</a>
+                </li>
+
+                <li class="sub-item">
+                    <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Checkbox / Radio</a>
                 </li>
             </ul>
         </li>
 
-        <li>
-            <h3>Angular</h3>
-            <ul>
-                <li class="nav-item">
+        <li class="feature-item" (click)="setSectionKey('angular')">
+
+            <h3 class="title-item" [ngClass]="{'expanded': getSectionKey() === 'angular'}">
+                <span>Angular</span>
+
+                <i class="icon-item">
+                    <span btlSvg defsFolder="web" file="cart-defs" name="shape-icon-arrow-r" class="icon s-arrow-r"></span>
+                </i>
+            </h3>
+
+            <ul class="sub-feature" [ngClass]="{'expanded': getSectionKey() === 'angular'}">
+
+                <li class="sub-item">
                     <a [routerLink]="['/directives']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Directives</a>
+
                     <ul>
                         <li>
                             <a [routerLink]="['/directives/btl-svg']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">BtlSvg</a>
                         </li>
-                        <li class="nav-item">
+
+                        <li>
                             <a [routerLink]="['/directives/circles-loader']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">CirclesLoader</a>
                         </li>
                     </ul>
                 </li>
-                <li class="nav-item">
+
+                <li class="sub-item">
                     <a [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Components</a>
 
                     <ul>
@@ -38,14 +74,16 @@
         </li>
     </ul>
 
-    <h2>Outils</h2>
-    <ul>
-        <li class="nav-item">
-            <a [routerLink]="['/svg']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Liste des SVG</a>
-        </li>
-        <li class="nav-item">
-            <a href="http://local.angularninja/" target="_blank">Formation Angular</a>
+    <h2 class="title-section">Outils</h2>
+
+    <ul class="tools-wrapper">
+
+        <li>
+            <a class="tools-item" [routerLink]="['/svg']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Liste des SVG</a>
         </li>
 
+        <li>
+            <a class="tools-item" href="http://local.angularninja/" target="_blank">Formation Angular</a>
+        </li>
     </ul>
 </nav>

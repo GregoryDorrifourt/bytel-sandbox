@@ -1,14 +1,23 @@
+@import '../../../scss/bootstrap/scss/functions';
+@import '../../../scss/bootstrap/scss/variables';
+@import '../../../scss/custom';
+
 .title-wrapper {
 
-    height: 4.5rem;
-    overflow: hidden;
-    padding: 0.5rem 0 .5rem 3rem;
+    background-color: $brand-secondary;
+    align-items:center;
     display: flex;
     flex: 1 0 auto;
-    flex-flow: row ;
+    flex-flow: row nowrap;
+    height: 5rem;
+    overflow: hidden;
+    padding: 0.5rem 0 .5rem 3rem;
 
     .title {
+
+        color: $white;
         font-size: 2rem;
-        margin-left: 1rem;
+        margin-bottom: 0;
+        margin-left: 2rem;
     }
 }

@@ -59,7 +59,7 @@ export class SvgComponent implements OnInit, OnDestroy {
     // @TODO: Replace with native function
     private copyIcon(data, category) {
 
-        const str = `<i class='icon-item">
+        const str = `<i class="icon-item">
                         <span btlSvg file="${category}-defs" name="shape-${data.file}" class="${data.class}"></span>
                     </i>`;
         this.ctc.copy(str).then(() => {

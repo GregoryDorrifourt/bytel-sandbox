@@ -7,9 +7,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+    public currentSectionKey = '';
     constructor() { }
 
-    ngOnInit() {
+    ngOnInit() {}
+
+    setSectionKey(key: string) {
+
+        if (key === this.currentSectionKey) {
+            this.setSectionKey('');
+            return;
+        }
+        this.currentSectionKey = key;
+    }
+
+    getSectionKey(): string {
+        return this.currentSectionKey;
     }
 
 }

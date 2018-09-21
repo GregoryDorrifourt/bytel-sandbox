@@ -35,28 +35,38 @@ h5,
 h6 {
     font-weight: normal;
 }
+
+html,
+body {
+
+    height: 100%;
+}
+
 html {
 
     font-size: $default-root-font-size;
-
-    body {
-        color: $text-color;
-        font-family: $font-family-base;
-        font-size: $font-size-base;
-    }
-
 }
+
+body {
+    color: $text-color;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+}
+
+
 
 // box white
 .box-header,
 .box-content {
+
     background-color: $white;
 }
 
 .box-header {
-  margin-bottom: .2rem;
+
+    margin-bottom: .2rem;
     position: sticky;
-    top: 4.6rem;
+    top: 5.1rem;
     z-index: 1;
     border-bottom: 2px solid $fade-grey;
 }

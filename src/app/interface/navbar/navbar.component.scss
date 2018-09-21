@@ -4,10 +4,96 @@
 @import '../../../scss/custom';
 
 @import "../../../scss/bootstrap/scss/mixins";
+@import "../../../scss/bootstrap/scss/mixins/screen-reader";
 
-.nav {
+@import "../../../scss/bootstrap/scss/utilities/screenreaders";
 
-    padding: 1rem;
+.form-search {
+
+    padding: 2rem;
+
+    .form-control:focus {
+
+        border-color: $brand-secondary;
+        box-shadow: 0 0 0 0.2rem rgba($brand-secondary, 0.25);
+    }
+}
+
+.nav-vertical {
+
+    padding: 0 1.5rem;
     position: sticky;
-    top: 4.6rem;
+    top: 5.1rem;
+
+    .title-section {
+
+        color: $brand-secondary;
+        font-weight: 700;
+        margin-bottom: 1.5rem;
+    }
+
+    .feature-wrapper {
+
+        list-style-type: none;
+        padding: 0;
+
+        .title-item {
+
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            flex-flow: row nowrap;
+            font-size: 1.4rem;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0.5rem 1.5rem;
+            text-transform: uppercase;
+
+            &:hover {
+                background-color: rgba(100, 100, 100, 0.05);
+            }
+
+            .icon-item {
+
+                line-height: 0;
+
+                /deep/ .icon {
+
+                    height: 1.4rem;
+                    transition: all 0.3s ease;
+                    width: 1.4rem;
+                }
+            }
+
+            &.expanded {
+
+                /deep/ .icon {
+
+                    transform: rotate(90deg);
+                }
+            }
+        }
+
+        .sub-feature {
+
+            height: 0;
+            overflow: hidden;
+            transition: all 0.3s ease;
+
+            &.expanded {
+
+                height: 6rem;
+            }
+        }
+    }
+
+    .tools-wrapper {
+
+        .tools-item {
+
+            color: $silver-chalice;
+            display: block;
+            padding: 0.2rem 0;
+        }
+    }
 }
