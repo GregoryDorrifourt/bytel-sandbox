@@ -1,8 +1,8 @@
 <!-- Search -->
-<form class="form-search">
+<!--<form class="form-search">
     <label class="sr-only">Recherche...</label>
     <input class="form-control form-control-lg" type="search" placeholder="Recherche..." aria-label="Search">
-</form>
+</form>-->
 
 <nav class="nav-vertical">
     <h2 class="title-section">Documentation</h2>
@@ -22,15 +22,11 @@
             <ul class="sub-feature" [ngClass]="{'expanded': getSectionKey() === 'component-css'}">
 
                 <li class="sub-item">
-                    <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Boutons</a>
+                    <a class="page" [routerLink]="['/css-components/buttons']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}">Boutons</a>
                 </li>
 
                 <li class="sub-item">
-                    <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Formulaires</a>
-                </li>
-
-                <li class="sub-item">
-                    <a [routerLink]="['/showcase']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">Checkbox / Radio</a>
+                    <a class="page" [routerLink]="['/css-components/forms']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}">Formulaires</a>
                 </li>
             </ul>
         </li>
@@ -48,25 +44,27 @@
             <ul class="sub-feature" [ngClass]="{'expanded': getSectionKey() === 'angular'}">
 
                 <li class="sub-item">
-                    <a [routerLink]="['/directives']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Directives</a>
+                    <!--<a class="page" [routerLink]="['/directives']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Directives</a>-->
+                    <h3 class="title-sub-item">Directive</h3>
 
-                    <ul>
+                    <ul class="sub-sub-feature">
                         <li>
-                            <a [routerLink]="['/directives/btl-svg']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">BtlSvg</a>
+                            <a class="page" [routerLink]="['/directives/btl-svg']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}">BtlSvg</a>
                         </li>
 
                         <li>
-                            <a [routerLink]="['/directives/circles-loader']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">CirclesLoader</a>
+                            <a class="page" [routerLink]="['/directives/circles-loader']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">CirclesLoader</a>
                         </li>
                     </ul>
                 </li>
 
                 <li class="sub-item">
-                    <a [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}" class="nav-link">Components</a>
+                    <!--<a class="page" [routerLink]="['/components']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:true}">Components</a>-->
+                    <h3 class="title-sub-item">Composants</h3>
 
-                    <ul>
+                    <ul class="sub-sub-feature">
                         <li>
-                            <a [routerLink]="['/components/btl-price']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}" class="nav-link">BtlPriceComponent</a>
+                            <a class="page" [routerLink]="['/components/btl-price']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}">BtlPriceComponent</a>
                         </li>
                     </ul>
                 </li>

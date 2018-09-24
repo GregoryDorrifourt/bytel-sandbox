@@ -71,18 +71,54 @@ body {
     border-bottom: 2px solid $fade-grey;
 }
 
+.box-content {
+
+    .title-section {
+
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+}
+
+.view-code {
+
+    border: 3px solid #f7f7f9;
+
+    .highlight {
+
+        margin: 0;
+        padding: 2rem;
+    }
+}
+
 .showcase-code {
 
-    background: #F9F9F9;
+    background: #f7f7f9;
     border-radius: .3rem;
-    color: $silver-chalice;
-    font-family: Courier New, Arial;
+    color: $brand-secondary;
+    font-family: Menlo, Courier;
     font-size: $font-size-base;
     padding: .3rem;
 
     &+& {
         margin-left: .5rem;
     }
+
+
+    // color view code
+    .c-attr {
+        color: $brand-info;
+    }
+
+    .c-value {
+        color: $brand-primary;
+    }
+
+    .c-string {
+        color: $black;
+    }
+
+
 
     &.info {
         color: $brand-info;
@@ -98,13 +134,11 @@ body {
         color: $brand-success;
     }
 
-    &.warning,
-    .string {
+    &.warning {
         color: $brand-warning;
     }
 
-    &.primary,
-    .attr {
+    &.primary {
         color: $brand-primary;
     }
 }

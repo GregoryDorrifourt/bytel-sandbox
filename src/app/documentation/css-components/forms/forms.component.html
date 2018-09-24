@@ -1,0 +1,53 @@
+<!-- FORMS -->
+<div class="box">
+    <div class="box-header justify-content-between">
+        <h2 class="box-title"><span class="anchor" id="forms"></span>Formulaires</h2>
+    </div>
+
+    <div class="box-content">
+
+        <!-- Checkbox -->
+        <section class="checkbox-section">
+
+            <h3 class="title-section">Checkboxes et radios</h3>
+
+            <table class="table table-bordered table-description">
+                <tbody>
+                <tr>
+                    <th scope="row">Source CSS</th>
+                    <td class="c-info">@import "/scss/components/check-box"</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="view-code">
+
+                <div class="highlight">
+                    <label class="check-box-container" for="">
+                        <input type="checkbox" class="check-box-input" id="" [formControl]="sampleCB">
+                        <span class="check-box">
+                            <i class="icon-item">
+                                <span btlSvg defsFolder="web" file="common-defs" name="shape-icon-check" class="icon s-check"></span>
+                            </i>
+                        </span>
+                        Sélectionnez moi
+                    </label>
+                </div>
+
+                <pre class="showcase-code highlight">
+                    &lt;label class="check-box-container" for=""&gt;
+
+                        &lt;input type="checkbox" class="check-box-input" id="" [formControl]="sampleCB"&gt;
+                        &lt;span class="check-box"&gt;
+                            &lt;i class="icon-item"&gt;
+                                &lt;span btlSvg defsFolder="web" file="common-defs" name="shape-icon-check" class="icon s-check"&gt;&lt;/span&gt;
+                            &lt;/i&gt;
+                        &lt;/span&gt;
+                        Lorem Ipsum
+                    &lt;/label&gt;
+                </pre>
+            </div>
+        </section>
+
+    </div>
+</div>

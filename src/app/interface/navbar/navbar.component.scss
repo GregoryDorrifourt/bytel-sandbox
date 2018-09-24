@@ -77,12 +77,30 @@
         .sub-feature {
 
             height: 0;
+            list-style-type: none;
             overflow: hidden;
+            padding-left: 3rem;
             transition: all 0.3s ease;
 
             &.expanded {
 
-                height: 6rem;
+                height: auto;
+            }
+
+            .sub-sub-feature {
+                list-style-type: circle;
+            }
+
+            .sub-item {
+                margin-bottom: 1rem;
+            }
+
+            .title-sub-item {
+                font-size: 1.4rem;
+            }
+
+            .page {
+                color: $silver-chalice;
             }
         }
     }

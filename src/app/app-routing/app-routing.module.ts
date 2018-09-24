@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ShowcaseComponent } from '../showcase/showcase.component';
-import { SvgComponent } from '../svg/svg.component';
-import { FormsComponent } from '../showcase/forms/forms.component';
-import { ButtonsComponent } from '../showcase/buttons/buttons.component';
-import { MiscellaneousComponent } from '../showcase/miscellaneous/miscellaneous.component';
-import { DirectivesComponent } from '../directives/directives.component';
-import { CirclesLoaderComponent } from '../directives/circles-loader/circles-loader.component';
-import { BtlSvgComponent } from '../directives/btl-svg/btl-svg.component';
-import { ComponentsComponent } from '../components/components.component';
-import { BtlPriceDemoComponent } from '../components/btl-price/btl-price-demo.component';
+import { CssComponentsComponent } from '../documentation/css-components/css-components.component';
+import { SvgComponent } from '../tools/svg/svg.component';
+import { FormsComponent } from '../documentation/css-components/forms/forms.component';
+import { ButtonsComponent } from '../documentation/css-components/buttons/buttons.component';
+import { MiscellaneousComponent } from '../documentation/css-components/miscellaneous/miscellaneous.component';
+import { DirectivesComponent } from '../documentation/angular-docs/directives/directives.component';
+import { CirclesLoaderComponent } from '../documentation/angular-docs/directives/circles-loader/circles-loader.component';
+import { BtlSvgComponent } from '../documentation/angular-docs/directives/btl-svg/btl-svg.component';
+import { ComponentsComponent } from '../documentation/angular-docs/components/components.component';
+import { BtlPriceDemoComponent } from '../documentation/angular-docs/components/btl-price/btl-price-demo.component';
 
 const routes: Routes = [
     {
@@ -56,11 +56,11 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'showcase',
+        path: 'css-components',
         children: [
             {
                 path: '',
-                component: ShowcaseComponent,
+                component: CssComponentsComponent,
             },
             {
                 path: 'buttons',

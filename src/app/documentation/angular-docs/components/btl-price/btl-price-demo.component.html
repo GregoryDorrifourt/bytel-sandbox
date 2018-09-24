@@ -1,0 +1,89 @@
+<!-- COLORS AND BACKGROUND-->
+<div class="box">
+
+    <div class="box-header justify-content-between">
+        <h2 class="box-title"><span class="anchor" id="colors"></span>BtlPriceComponent <span class="badge badge-success">COMPONENT</span></h2>
+    </div>
+
+    <div class="box-content">
+
+        <section class="col-12">
+
+            <table class="table table-bordered table-description">
+
+                <tbody>
+                <tr>
+                    <th scope="row">Nom</th>
+                    <td class="c-info">BtlPriceComponent</td>
+                </tr>
+                <tr>
+                    <th scope="row">Selecteur</th>
+                    <td class="c-info">&lt;btl-price&gt;</td>
+                </tr>
+                <tr>
+                    <th scope="row">Source</th>
+                    <td class="c-info">src/baseBtl/base/btl-price/btl-price.component.ts</td>
+                </tr>
+                <tr>
+                    <th scope="row">Module</th>
+                    <td class="c-info">BaseModule</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="module-description">
+                <p>Composant prix du site.</p>
+            </div>
+        </section>
+
+        <section class="col-12">
+            <h3 class="title-description">Utilisation</h3>
+            <div class="showcase text-align-center">
+                <btl-price class="demo" [price]="32.99" [monthly]="true" [promoPrice]="20.99" position="right"></btl-price>
+            </div>
+            <p align="center">
+                <span class="showcase-code">&lt;<span class="component">btl-price</span> [<span class="c-primary">price</span>]="32.99" [<span class="c-primary">promoPrice</span>]="20.99" [<span class="c-primary">position</span>]="'right'" [<span class="c-primary">monthly</span>]="true" &gt;&lt;/<span class="component">btl-price</span>&gt;</span>
+            </p>
+        </section>
+
+        <section class="col-12">
+            <h3 class="title-description">Attributs</h3>
+
+            <table class="table table-bordered table-description">
+                <tbody>
+                <tr>
+                    <th scope="row"><span class="showcase-code primary">[price]</span><span class="badge badge-danger">OBLIGATOIRE</span><br><em class="type">number</em></th>
+                    <td>Il s'agit du prix principal. Seul attribut obligatoire. L'absence de cet attribut log une erreur en console. Toujours s'assurer de le valoriser</td>
+                </tr>
+                <tr>
+                    <th scope="row"><span class="showcase-code primary">[promoPrice]</span><br><em class="type">number</em></th>
+                    <td>Prix promotionnel. Si cet attribut est valorisé, il devient le prix principal et l'attribut price devient le prix secondaire.</td>
+                </tr>
+                <tr>
+                    <th scope="row"><span class="showcase-code primary">[showPromoPrice]</span><br><em class="type">boolean</em></th>
+                    <td>Définit si le prix secondaire doit s'afficher ou pas. Par défaut à <span class="showcase-code primary">true</span>. Si on le set à <span class="showcase-code primary">false</span>, le prix secondaire (uniquement s'il s'agit du <span class="showcase-code primary">promoPrice</span>) ne s'affichera pas.</td>
+                </tr>
+                <tr>
+                    <th scope="row"><span class="showcase-code primary">[position]</span><br><em class="type">string</em></th>
+                    <td>Positionne le prix secondaire autour du prix principal. Valeurs autorisées :
+                        <ul>
+                            <li><span class="showcase-code primary">left</span> : valeur par défaut. Le prix secondaire sera positionné à gauche du prix principal.</li>
+                            <li><span class="showcase-code primary">top</span> : Le prix secondaire sera positionné au dessus du prix principal.</li>
+                            <li><span class="showcase-code primary">right</span> : Le prix secondaire sera positionné à droite du prix principal.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <th scope="row"><span class="showcase-code primary">[oldPrice]</span><br><em class="type">number</em></th>
+                    <td>Permet d'afficher un prix secondaire. Contrairement au <span class="showcase-code primary">promoPrice</span>, il ne tient pas compte de l'attribut <span class="showcase-code primary">showPromoPrice</span> et ne remplacera pas le prix principal. Il s'affichera forcement s'il est valorisé. Exemple d'utilisation: Mur de téléphone B&You</td>
+                </tr>
+                <tr>
+                    <th scope="row"><span class="showcase-code primary">[monthly]</span><br><em class="type">boolean</em></th>
+                    <td>Définit s'il s'agit d'un prix mensuel ou non. Par défaut à <span class="showcase-code primary">false</span></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </div>
+</div>
