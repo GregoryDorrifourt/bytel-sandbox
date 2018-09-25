@@ -62,7 +62,7 @@ export class TemplateCodeGeneratorComponent implements OnInit {
         // Brace what's between quotes with '.c-value' class
         code = code.replace(/("([^"]|"")*")/g, `<span class="c-value">$1</span>`);
 
-        // Brace what's between quotes with '.c-value' class
+        // Brace what's between simple quotes with '.c-value' class
         code = code.replace(/('([^"]|'')*')/g, `<span class="c-string-value">$1</span>`);
 
         // Brace what's between tags with '.c-string' class
@@ -88,6 +88,7 @@ export class TemplateCodeGeneratorComponent implements OnInit {
     }
 
     public copyCode(code: string): void {
+        code = `<pre class="showcase-code">${code}</pre>`;
         this.ctc.copy(code).then(() => {
             this.copied = true;
             setTimeout(() => {
