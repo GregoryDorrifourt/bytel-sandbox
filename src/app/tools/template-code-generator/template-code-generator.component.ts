@@ -144,20 +144,20 @@ export class TemplateCodeGeneratorComponent implements OnInit {
         // 1 - Securing class attribute
         code = code.split('class').join('*class');
 
-        // 1 - Securing class attribute
+        // 2 - Securing string attribute
         code = code.split('string').join('*string');
 
         // Replace tags
         code = code.split('<').join('&lt;').split('>').join('&gt;');
 
+        // 3 - Highlight
         //     - Brace what's between quotes with '.c-value' class
         code = code.replace(/("([^"]|"")*")/g, `<span class="c-string-value">$1</span>`);
-
-        //     - Brace what's between quotes with '.c-value' class
-        code = code.replace(/([0-9])/g, `<span class="directive">$1</span>`);
-
         //     - Brace what's between simple quotes with '.c-value' class
         code = code.replace(/('([^']|'')*')/g, `<span class="c-string-value">$1</span>`);
+
+        //     - Brace numbers with '.c-value' class
+        code = code.replace(/([0-9])/g, `<span class="directive">$1</span>`);
 
         for(let item of this.declarators){
             code = code.split(item).join(`<span class="c-value">${item}</span>`)
@@ -171,9 +171,10 @@ export class TemplateCodeGeneratorComponent implements OnInit {
         for(let item of this.operators){
             code = code.split(item).join(`<span class="c-attr">${item}</span>`)
         }
-        //  - Restore class
+        // 4 - Restore class
         code = code.split('*class').join('class');
-        // 4 - Restore class attribute
+
+        // 5 - Restore class attribute
         code = code.split('*string').join('string');
 
         return code;
