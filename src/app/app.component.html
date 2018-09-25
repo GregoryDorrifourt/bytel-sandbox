@@ -1,21 +1,18 @@
-<div class="wrap">
+<header class="header sticky-top">
+    <sb-header></sb-header>
+</header>
 
-    <header class="header sticky-top">
-        <sb-header></sb-header>
-    </header>
+<main role="main" class="main-wrapper">
 
-    <main role="main" class="main-wrapper">
+    <aside class="aside">
+        <sb-navbar class="sb-navbar"></sb-navbar>
+    </aside>
 
-        <aside class="aside">
-            <sb-navbar class="sb-navbar"></sb-navbar>
-        </aside>
-
-        <section class="content">
-            <router-outlet></router-outlet>
-            <sb-footer></sb-footer>
-        </section>
-    </main>
-</div>
+    <section class="content">
+        <router-outlet></router-outlet>
+        <sb-footer></sb-footer>
+    </section>
+</main>
 
 <!--
 <footer class="footer">
