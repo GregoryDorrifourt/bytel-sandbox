@@ -122,13 +122,13 @@ export class TemplateCodeGeneratorComponent implements OnInit {
         code = code.replace(/{{(.*[^])}}/g, `<span class="c-string">{{$1}}</span>`);
 
         //     - Brace attributes between hooks with '.directive" class
-        code = code.split(' [').join(` <span class="directive">[`).split(']=').join(`]</span>=`);
+        code = code.split(' [').join(` <span class="c-directive">[`).split(']=').join(`]</span>=`);
 
         for(let item of this.directives){
-            code = code.split(item).join(`<span class="directive">${item}</span>`)
+            code = code.split(item).join(`<span class="c-directive">${item}</span>`)
         }
         for(let item of this.components){
-            code = code.split(item).join(`<span class="component">${item}</span>`)
+            code = code.split(item).join(`<span class="c-component">${item}</span>`)
         }
         for(let item of this.commonAttrs){
             code = code.split(item).join(`<span class="c-attr">${item}</span>`)
@@ -157,7 +157,7 @@ export class TemplateCodeGeneratorComponent implements OnInit {
         code = code.replace(/('([^']|'')*')/g, `<span class="c-string-value">$1</span>`);
 
         //     - Brace numbers with '.c-value' class
-        code = code.replace(/([0-9])/g, `<span class="directive">$1</span>`);
+        code = code.replace(/([0-9])/g, `<span class="c-directive">$1</span>`);
 
         for(let item of this.declarators){
             code = code.split(item).join(`<span class="c-value">${item}</span>`)
@@ -166,7 +166,7 @@ export class TemplateCodeGeneratorComponent implements OnInit {
             code = code.split(item).join(`<span class="c-attr">${item}</span>`)
         }
         for(let item of this.values){
-            code = code.split(item).join(`<span class="directive">${item}</span>`)
+            code = code.split(item).join(`<span class="c-directive">${item}</span>`)
         }
         for(let item of this.operators){
             code = code.split(item).join(`<span class="c-attr">${item}</span>`)

@@ -107,6 +107,7 @@ body {
 
 
     // color view code
+    .c-info,
     .c-attr {
         color: $brand-info;
     }
@@ -121,6 +122,14 @@ body {
 
     .c-string-value {
         color: $brand-warning;
+    }
+
+    .c-directive {
+        color: $brand-danger;
+    }
+
+    .c-component {
+        color: $brand-success;
     }
 
     &.info {
