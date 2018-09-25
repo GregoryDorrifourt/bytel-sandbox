@@ -15,7 +15,7 @@
                 <tbody>
                 <tr>
                     <th scope="row">Source CSS</th>
-                    <td class="c-info">@import "/scss/components/check-box"</td>
+                    <td class="c-info">@import "/scss/components/check-box";</td>
                 </tr>
                 </tbody>
             </table>
@@ -23,8 +23,8 @@
             <div class="view-code">
 
                 <div class="highlight">
-                    <label class="check-box-container" for="">
-                        <input type="checkbox" class="check-box-input" id="" [formControl]="sampleCB">
+                    <label class="check-box-container" for="cb">
+                        <input type="checkbox" class="check-box-input" id="cb" [formControl]="sampleCB">
                         <span class="check-box">
                             <i class="icon-item">
                                 <span btlSvg defsFolder="web" file="common-defs" name="shape-icon-check" class="icon s-check"></span>
@@ -35,15 +35,15 @@
                 </div>
 
                 <pre class="showcase-code highlight">
-                    &lt;label class="check-box-container" for=""&gt;
+                    &lt;label class="check-box-container" for="cb"&gt;
 
-                        &lt;input type="checkbox" class="check-box-input" id="" [formControl]="sampleCB"&gt;
+                        &lt;input type="checkbox" class="check-box-input" id="cb" [formControl]="sampleCB"&gt;
                         &lt;span class="check-box"&gt;
                             &lt;i class="icon-item"&gt;
                                 &lt;span btlSvg defsFolder="web" file="common-defs" name="shape-icon-check" class="icon s-check"&gt;&lt;/span&gt;
                             &lt;/i&gt;
                         &lt;/span&gt;
-                        Lorem Ipsum
+                        Sélectionnez moi
                     &lt;/label&gt;
                 </pre>
             </div>

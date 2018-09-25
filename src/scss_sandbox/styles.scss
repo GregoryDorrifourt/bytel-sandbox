@@ -39,7 +39,7 @@ h6 {
 html,
 body {
 
-    height: 100%;
+    min-height: 100%;
 }
 
 html {
@@ -49,6 +49,7 @@ html {
 
 body {
     color: $text-color;
+    background: #f9f9f9;
     font-family: $font-family-base;
     font-size: $font-size-base;
 }
@@ -118,7 +119,9 @@ body {
         color: $black;
     }
 
-
+    .c-string-value {
+        color: $brand-warning;
+    }
 
     &.info {
         color: $brand-info;
@@ -270,7 +273,7 @@ pre {
     font-size: $font-size-lg;
 
     th {
-        background-color: #F9F9F9;
+        background-color: #f7f7f9;
 
         .type {
             font-weight: normal;
@@ -293,7 +296,7 @@ pre {
 
 .title-description {
 
-    border-bottom: 2px solid #F9F9F9;
+    border-bottom: 2px solid #f7f7f9;
     font-size: 2.4rem;
     margin-bottom: 2rem;
     width: 100%;
@@ -301,7 +304,7 @@ pre {
 
 .module-description {
 
-    background-color: #F9F9F9;
+    background-color: #f7f7f9;
     border: 1px solid $silver-nobel;
     border-radius: 0.6rem;
     font-size: $font-size-lg;

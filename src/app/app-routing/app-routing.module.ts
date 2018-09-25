@@ -10,6 +10,7 @@ import { CirclesLoaderComponent } from '../documentation/angular-docs/directives
 import { BtlSvgComponent } from '../documentation/angular-docs/directives/btl-svg/btl-svg.component';
 import { ComponentsComponent } from '../documentation/angular-docs/components/components.component';
 import { BtlPriceDemoComponent } from '../documentation/angular-docs/components/btl-price/btl-price-demo.component';
+import {TemplateCodeGeneratorComponent} from "../tools/template-code-generator/template-code-generator.component";
 
 const routes: Routes = [
     {
@@ -18,8 +19,28 @@ const routes: Routes = [
         pathMatch: 'full'
     },
     {
-        path: 'svg',
-        component: SvgComponent
+        path: 'tools',
+        children: [
+            {
+                path: '',
+                redirectTo: 'svg',
+                pathMatch: 'full'
+            },
+            {
+                path: 'svg',
+                component: SvgComponent
+
+            },
+            {
+                path: 'generator',
+                component: TemplateCodeGeneratorComponent
+            },
+            {
+                path: '**',
+                redirectTo: 'svg',
+                pathMatch: 'full'
+            }
+        ]
     },
     {
         path: 'directives',
