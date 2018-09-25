@@ -54,6 +54,10 @@ body {
     font-size: $font-size-base;
 }
 
+pre {
+    width: 100%;
+}
+
 // box white
 .box-header,
 .box-content {
@@ -63,11 +67,11 @@ body {
 
 .box-header {
 
+    border-bottom: 2px solid $fade-grey;
     margin-bottom: .2rem;
     position: sticky;
     top: 5.1rem;
-    z-index: 1;
-    border-bottom: 2px solid $fade-grey;
+    z-index: 5;
 }
 
 .box-content {
@@ -126,11 +130,14 @@ body {
 
     // color view code
     .c-info,
-    .c-attr {
+    .c-attr,
+    &.info
+    {
         color: $brand-info;
     }
 
-    .c-value {
+    .c-value,
+    &.primary {
         color: $brand-primary;
     }
 
@@ -138,43 +145,20 @@ body {
         color: $black;
     }
 
-    .c-string-value {
+    .c-string-value,
+    &.warning{
         color: $brand-warning;
     }
 
-    .c-directive {
+    .c-directive,
+    &.danger{
         color: $brand-danger;
     }
 
-    .c-component {
+    .c-component,
+    &.success{
         color: $brand-success;
     }
-
-    &.info {
-        color: $brand-info;
-    }
-
-    &.danger,
-    .directive {
-        color: $brand-danger;
-    }
-
-    &.success,
-    .component {
-        color: $brand-success;
-    }
-
-    &.warning {
-        color: $brand-warning;
-    }
-
-    &.primary {
-        color: $brand-primary;
-    }
-}
-
-.link{
-    color: $brand-primary;
 }
 
 .jumbotron {
@@ -225,15 +209,11 @@ body {
     z-index: 9999;
 }
 
-
-pre {
-    width: 100%;
-}
-
 .link{
 
-    padding: .2rem .5rem;
+    color: $brand-primary;
     border: .1rem solid transparent;
+    padding: .2rem .5rem;
 
     &:hover{
         text-decoration: none;
@@ -342,7 +322,7 @@ pre {
 }
 
 
-.c-primary{
+/*.c-primary{
     color: $brand-primary;
 }
 .c-secondary{
@@ -359,4 +339,4 @@ pre {
 }
 .c-danger{
     color: $brand-danger;
-}
+}*/
