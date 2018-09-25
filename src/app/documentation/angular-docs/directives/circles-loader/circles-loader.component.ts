@@ -17,7 +17,7 @@ export class CirclesLoaderComponent implements OnInit {
     }
 
     copyToClipboard(size){
-        let str = '<div circlesLoader [size]="\''+size+'\'"></div>';
+        const str = `<div circlesLoader size="${size}"></div>`;
         this.ctc.copy(str).then(()=>{
             this.copied = true;
             setTimeout(() => {

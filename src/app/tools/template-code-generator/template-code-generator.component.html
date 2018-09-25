@@ -14,6 +14,16 @@
     <div class="box-content">
         <section>
             <h3>Input :</h3>
+            <div>
+                <label for="html">
+                    <input id="html" type="radio" name="codeType" value="html" [formControl]="codeType"/>
+                    HTML
+                </label>
+                <label for="js">
+                    <input id="js" type="radio" name="codeType" value="js" [formControl]="codeType"/>
+                    JS
+                </label>
+            </div>
             <textarea class="input-code-area" [formControl]="inputCode" placeholder="Collez du code HTML" rows="20"></textarea>
             <p class="button-wrapper">
                 <button role="button" class="btn btn-primary btn-lg" (click)="generateCode(inputCode.value)" [disabled]="!inputCode.value">Générer</button>

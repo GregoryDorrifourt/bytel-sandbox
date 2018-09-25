@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from "@angular/forms";
-import {CopyToClipboardService} from "../../base/services/copy-to-clipboard.service";
+import { FormControl } from '@angular/forms';
+import { CopyToClipboardService } from '../../base/services/copy-to-clipboard.service';
 
 @Component({
     selector: 'sb-template-code-generator',
@@ -11,6 +11,7 @@ export class TemplateCodeGeneratorComponent implements OnInit {
 
     public copied: boolean = false;
     public inputCode: FormControl;
+    public codeType: FormControl;
     public outputCode: string;
 
     private readonly directives: string[] = [
@@ -28,7 +29,7 @@ export class TemplateCodeGeneratorComponent implements OnInit {
     ];
 
     private readonly commonAttrs: string[] = [
-        'clss',
+        '*class',
         ' role',
         ' data-toggle',
         ' name',
@@ -38,40 +39,89 @@ export class TemplateCodeGeneratorComponent implements OnInit {
         ' type='
     ];
 
+    private readonly declarators: string[] = [
+        'let',
+        'const',
+        '*class',
+        'interface',
+        'import',
+        'export',
+        'from',
+        'public',
+        'private',
+        'protected',
+        'implements',
+        'extends',
+        ' = ',
+        ' == ',
+        ' === ',
+        'new',
+        'this',
+        ' if',
+        ' else ',
+        'for'
+    ];
+
+    private readonly types: string[] = [
+        '*string',
+        'boolean',
+        'FormControl',
+        'number',
+        'void'
+    ];
+
+    private readonly values: string[] = [
+        'false',
+        'true'
+    ];
+
+    private readonly operators: string[] = [
+        '++',
+        '.split',
+        '.join',
+        '.push',
+        '.sort'
+    ];
+
     constructor(private ctc: CopyToClipboardService) { }
 
     ngOnInit() {
 
         this.inputCode = new FormControl(``);
+        this.codeType = new FormControl(`html`);
     }
 
     public generateCode(code: string): void {
-        // 1 - Securize class attribute
-        code = code.split('class=').join('clss=');
-        // 2 - Replace tags
-        code = code.split('<').join('&lt;').split('>').join('&gt;');
-        // 3 - Highlight code
-        code = this.highlightCode(code);
-        // 4 - Restore class attribute
-        code = code.split('clss').join('class');
+        if(this.codeType.value === "html"){
+            code = this.highlightHTML(code);
+        } else {
+            code = this.highlightJS(code);
+        }
 
         this.outputCode = code;
     }
 
-    public highlightCode(code: string): string {
-        // Brace what's between quotes with '.c-value' class
+    public highlightHTML(code: string): string {
+        // 1 - Securing class attribute
+        code = code.split('class=').join('*class=');
+
+        // 2 - Replace tags
+        code = code.split('<').join('&lt;').split('>').join('&gt;');
+
+        // 3 - Code highlight
+        //     - Brace what's between quotes with '.c-value' class
         code = code.replace(/("([^"]|"")*")/g, `<span class="c-value">$1</span>`);
 
-        // Brace what's between simple quotes with '.c-value' class
-        code = code.replace(/('([^"]|'')*')/g, `<span class="c-string-value">$1</span>`);
+        //     - Brace what's between simple quotes with '.c-value' class
+        code = code.replace(/('([^']|'')*')/g, `<span class="c-string-value">$1</span>`);
 
-        // Brace what's between tags with '.c-string' class
+        //     - Brace what's between tags with '.c-string' class
         code = code.replace(/&gt;(.*[^])&lt;/g, `&gt;<span class="c-string">$1</span>&lt;`);
 
-        // Brace what's between double braces with '.c-string' class
+        //     - Brace what's between double braces with '.c-string' class
         code = code.replace(/{{(.*[^])}}/g, `<span class="c-string">{{$1}}</span>`);
 
-        // Brace attributes between hooks with '.directive" class
+        //     - Brace attributes between hooks with '.directive" class
         code = code.split(' [').join(` <span class="directive">[`).split(']=').join(`]</span>=`);
 
         for(let item of this.directives){
@@ -83,6 +133,48 @@ export class TemplateCodeGeneratorComponent implements OnInit {
         for(let item of this.commonAttrs){
             code = code.split(item).join(`<span class="c-attr">${item}</span>`)
         }
+
+        // 4 - Restore class attribute
+        code = code.split('*class').join('class');
+
+        return code;
+    }
+
+    public highlightJS(code: string){
+        // 1 - Securing class attribute
+        code = code.split('class').join('*class');
+
+        // 1 - Securing class attribute
+        code = code.split('string').join('*string');
+
+        // Replace tags
+        code = code.split('<').join('&lt;').split('>').join('&gt;');
+
+        //     - Brace what's between quotes with '.c-value' class
+        code = code.replace(/("([^"]|"")*")/g, `<span class="c-string-value">$1</span>`);
+
+        //     - Brace what's between quotes with '.c-value' class
+        code = code.replace(/([0-9])/g, `<span class="directive">$1</span>`);
+
+        //     - Brace what's between simple quotes with '.c-value' class
+        code = code.replace(/('([^']|'')*')/g, `<span class="c-string-value">$1</span>`);
+
+        for(let item of this.declarators){
+            code = code.split(item).join(`<span class="c-value">${item}</span>`)
+        }
+        for(let item of this.types){
+            code = code.split(item).join(`<span class="c-attr">${item}</span>`)
+        }
+        for(let item of this.values){
+            code = code.split(item).join(`<span class="directive">${item}</span>`)
+        }
+        for(let item of this.operators){
+            code = code.split(item).join(`<span class="c-attr">${item}</span>`)
+        }
+        //  - Restore class
+        code = code.split('*class').join('class');
+        // 4 - Restore class attribute
+        code = code.split('*string').join('string');
 
         return code;
     }
