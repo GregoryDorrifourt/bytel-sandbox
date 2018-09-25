@@ -7,3 +7,13 @@
 
 // Checkbox
 @import '../../../../scss/components/check-box';
+
+// Radio
+@import '../../../../scss/components/radio-input';
+
+.section-radio {
+
+    .form-group {
+        margin: 0;
+    }
+}
