@@ -8,10 +8,10 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { ButtonsComponent } from './buttons/buttons.component';
 import { FormsComponent } from './forms/forms.component';
 import { MiscellaneousComponent } from './miscellaneous/miscellaneous.component';
 import { CssComponentsComponent } from './css-components.component';
+import { ButtonsComponent } from './buttons/buttons.component';
 
 @NgModule({
     imports: [

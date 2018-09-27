@@ -83,7 +83,38 @@ pre {
     }
 
     .section-component {
-        margin-bottom: 4rem;
+        margin-bottom: 3rem;
+    }
+
+    // color view code
+    .c-info,
+    .c-attr,
+    .info {
+        color: $brand-info;
+    }
+
+    .c-value,
+    .primary {
+        color: $brand-primary;
+    }
+
+    .c-string {
+        color: $black;
+    }
+
+    .c-string-value,
+    .warning{
+        color: $brand-warning;
+    }
+
+    .c-directive,
+    .danger{
+        color: $brand-danger;
+    }
+
+    .c-component,
+    .success{
+        color: $brand-success;
     }
 }
 
@@ -107,6 +138,7 @@ pre {
 .view-code {
 
     border: 3px solid #f7f7f9;
+    margin-bottom: 2rem;
 
     .highlight {
 
@@ -127,38 +159,6 @@ pre {
     &+& {
         margin-left: .5rem;
     }
-
-    // color view code
-    .c-info,
-    .c-attr,
-    &.info
-    {
-        color: $brand-info;
-    }
-
-    .c-value,
-    &.primary {
-        color: $brand-primary;
-    }
-
-    .c-string {
-        color: $black;
-    }
-
-    .c-string-value,
-    &.warning{
-        color: $brand-warning;
-    }
-
-    .c-directive,
-    &.danger{
-        color: $brand-danger;
-    }
-
-    .c-component,
-    &.success{
-        color: $brand-success;
-    }
 }
 
 .jumbotron {
@@ -170,6 +170,7 @@ pre {
     display: inline-block;
 
     .icon {
+
         fill: $brand-secondary;
         height: 6.4rem;
         width: 6.4rem;
