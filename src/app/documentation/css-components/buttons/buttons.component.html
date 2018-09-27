@@ -1,6 +1,10 @@
 
 <!-- BUTTONS -->
 <div class="box">
+    <div class="alert alert-success notification-alert" *ngIf="copied">
+        Copié dans le presse-papier avec succes !
+    </div>
+
     <div class="box-header">
         <h2 class="box-title">Boutons de Bouygues Télécom</h2>
     </div>
@@ -24,12 +28,12 @@
                 </div>
 
                 <div class="code-wrapper">
-                    <button class="btn btn-copy">Copier</button>
+                    <button class="btn btn-copy" (click)="copyCode(sample1)">Copier</button>
 
-                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-default"</span>&gt;<span class="c-string">Default&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary"</span>&gt;<span class="c-string">Primary&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-secondary"</span>&gt;<span class="c-string">Secondary&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-info"</span>&gt;<span class="c-string">Info</span>&lt;/button&gt;</pre>
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-default"</span>&gt;<span class="c-string">Default</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary"</span>&gt;<span class="c-string">Primary</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-secondary"</span>&gt;<span class="c-string">Secondary</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-info"</span>&gt;<span class="c-string">Info</span>&lt;/button&gt;</pre>
 
                 </div>
             </div>
@@ -52,12 +56,12 @@
                 </div>
 
                 <div class="code-wrapper">
-                    <button class="btn btn-copy">Copier</button>
+                    <button class="btn btn-copy" (click)="copyCode(sample2)">Copier</button>
 
-                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-default"</span>&gt;<span class="c-string">Default&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary"</span>&gt;<span class="c-string">Primary&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-secondary"</span>&gt;<span class="c-string">Secondary&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-info"</span>&gt;<span class="c-string">Info</span>&lt;/button&gt;</pre>
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-default"</span>&gt;<span class="c-string">Default</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary"</span>&gt;<span class="c-string">Primary</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-secondary"</span>&gt;<span class="c-string">Secondary</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-info"</span>&gt;<span class="c-string">Info</span>&lt;/button&gt;</pre>
 
                 </div>
             </div>
@@ -78,10 +82,10 @@
                 </div>
 
                 <div class="code-wrapper">
-                    <button class="btn btn-copy">Copier</button>
+                    <button class="btn btn-copy" (click)="copyCode(sample3)">Copier</button>
 
-                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-lg"</span>&gt;<span class="c-string">Large button&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-lg"</span>&gt;<span class="c-string">Large button</span>&lt;/button&gt;</pre>
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-lg"</span>&gt;<span class="c-string">Large button</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-lg"</span>&gt;<span class="c-string">Large button</span>&lt;/button&gt;</pre>
                 </div>
             </div>
 
@@ -93,10 +97,10 @@
                 </div>
 
                 <div class="code-wrapper">
-                    <button class="btn btn-copy">Copier</button>
+                    <button class="btn btn-copy" (click)="copyCode(sample4)">Copier</button>
 
-                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-sm"</span>&gt;<span class="c-string">Small button&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-sm"</span>&gt;<span class="c-string">Small button</span>&lt;/button&gt;</pre>
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-sm"</span>&gt;<span class="c-string">Small button</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-sm"</span>&gt;<span class="c-string">Small button</span>&lt;/button&gt;</pre>
                 </div>
             </div>
 
@@ -110,10 +114,10 @@
                 </div>
 
                 <div class="code-wrapper">
-                    <button class="btn btn-copy">Copier</button>
+                    <button class="btn btn-copy" (click)="copyCode(sample5)">Copier</button>
 
-                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-lg btn-block"</span>&gt;<span class="c-string">Block button&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-lg btn-block"</span>&gt;<span class="c-string">Block button</span>&lt;/button&gt;</pre>
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-lg btn-block"</span>&gt;<span class="c-string">Block button</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-lg btn-block"</span>&gt;<span class="c-string">Block button</span>&lt;/button&gt;</pre>
                 </div>
             </div>
         </section>
@@ -133,10 +137,10 @@
                 </div>
 
                 <div class="code-wrapper">
-                    <button class="btn btn-copy">Copier</button>
+                    <button class="btn btn-copy" (click)="copyCode(sample6)">Copier</button>
 
-                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-lg"</span> disabled&gt;<span class="c-string">Disabled button&lt;/button&gt;
-</span>&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-lg"</span> disabled&gt;<span class="c-string">Disabled button</span>&lt;/button&gt;</pre>
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-lg"</span> disabled&gt;<span class="c-string">Disabled button</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-lg"</span> disabled&gt;<span class="c-string">Disabled button</span>&lt;/button&gt;</pre>
 
                 </div>
             </div>

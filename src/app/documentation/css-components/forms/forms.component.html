@@ -1,5 +1,9 @@
 <!-- FORMS -->
 <div class="box">
+    <div class="alert alert-success notification-alert" *ngIf="copied">
+        Copié dans le presse-papier avec succes !
+    </div>
+
     <div class="box-header">
         <h2 class="box-title"><span class="anchor" id="forms"></span>Formulaires</h2>
     </div>
@@ -35,7 +39,7 @@
                 </div>
 
                 <div class="code-wrapper">
-                    <button class="btn btn-copy">Copier</button>
+                    <button class="btn btn-copy" (click)="copyCode(sample1)">Copier</button>
 
                 <pre class="showcase-code highlight">
 &lt;label <span class="c-attr">class</span>=<span class="c-value">"check-box-container"</span><span class="c-attr"> for=</span><span class="c-value">"cb"</span>&gt;
@@ -84,14 +88,13 @@
                                 <input class="form-control radio-input-field" hidden type="radio" id="name2" value="1" name="sampleRadio" [formControl]="sampleRadio">
                                 <span class="radio-input-check"></span>
                                 <span class="label-offer label">Choix 2</span>
-
                             </label>
                         </div>
                     </div>
                 </div>
 
                 <div class="code-wrapper">
-                    <button class="btn btn-copy">Copier</button>
+                    <button class="btn btn-copy" (click)="copyCode(sample2)">Copier</button>
 
                     <pre class="showcase-code highlight">&lt;div <span class="c-attr">class</span>=<span class="c-value">"form-group"</span>&gt;
     &lt;div <span class="c-attr">class</span>=<span class="c-value">"label-field"</span>&gt;
