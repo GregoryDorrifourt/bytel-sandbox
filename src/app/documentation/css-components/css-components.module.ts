@@ -12,6 +12,7 @@ import { FormsComponent } from './forms/forms.component';
 import { MiscellaneousComponent } from './miscellaneous/miscellaneous.component';
 import { CssComponentsComponent } from './css-components.component';
 import { ButtonsComponent } from './buttons/buttons.component';
+import { CheckboxRadioComponent } from './checkbox-radio/checkbox-radio.component';
 
 @NgModule({
     imports: [
@@ -27,7 +28,8 @@ import { ButtonsComponent } from './buttons/buttons.component';
         ButtonsComponent,
         FormsComponent,
         MiscellaneousComponent,
-        CssComponentsComponent
+        CssComponentsComponent,
+        CheckboxRadioComponent
     ]
 })
 export class CssComponentsModule { }

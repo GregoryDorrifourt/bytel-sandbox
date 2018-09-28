@@ -10,7 +10,8 @@ import { CirclesLoaderComponent } from '../documentation/angular-docs/directives
 import { BtlSvgComponent } from '../documentation/angular-docs/directives/btl-svg/btl-svg.component';
 import { ComponentsComponent } from '../documentation/angular-docs/components/components.component';
 import { BtlPriceDemoComponent } from '../documentation/angular-docs/components/btl-price/btl-price-demo.component';
-import {TemplateCodeGeneratorComponent} from "../tools/template-code-generator/template-code-generator.component";
+import { TemplateCodeGeneratorComponent } from '../tools/template-code-generator/template-code-generator.component';
+import { CheckboxRadioComponent } from '../documentation/css-components/checkbox-radio/checkbox-radio.component';
 
 const routes: Routes = [
     {
@@ -81,11 +82,15 @@ const routes: Routes = [
         children: [
             {
                 path: '',
-                component: CssComponentsComponent,
+                component: CssComponentsComponent
             },
             {
                 path: 'buttons',
                 component: ButtonsComponent
+            },
+            {
+                path: 'checkbox-radio',
+                component: CheckboxRadioComponent
             },
             {
                 path: 'forms',

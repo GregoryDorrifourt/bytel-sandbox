@@ -22,11 +22,17 @@
             <ul class="sub-feature" [ngClass]="{'expanded': getSectionKey() === 'component-css'}">
 
                 <li class="sub-item">
-                    <a class="page" [routerLink]="['/css-components/buttons']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}">Boutons</a>
+                    <a class="page" [routerLink]="['/css-components/buttons']" [routerLinkActive]="['router-link-active']"
+                       [routerLinkActiveOptions]="{exact:false}">Boutons</a>
                 </li>
 
                 <li class="sub-item">
-                    <a class="page" [routerLink]="['/css-components/forms']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}">Formulaires</a>
+                    <a class="page" [routerLink]="['/css-components/checkbox-radio']" [routerLinkActive]="['router-link-active']" [routerLinkActiveOptions]="{exact:false}">Checkbox & Radio</a>
+                </li>
+
+                <li class="sub-item">
+                    <a class="page" [routerLink]="['/css-components/forms']" [routerLinkActive]="['router-link-active']"
+                       [routerLinkActiveOptions]="{exact:false}">Formulaires</a>
                 </li>
             </ul>
         </li>
