@@ -13,7 +13,6 @@ export class CheckboxRadioComponent implements OnInit {
 
     public sampleCB: FormControl;
     public sampleRadio: FormControl;
-    public sampleButtonGroup: FormControl;
 
     public copied: boolean = false;
 
@@ -60,6 +59,5 @@ export class CheckboxRadioComponent implements OnInit {
     ngOnInit() {
         this.sampleCB = new FormControl('');
         this.sampleRadio = new FormControl('');
-        this.sampleButtonGroup = new FormControl('');
     }
 }

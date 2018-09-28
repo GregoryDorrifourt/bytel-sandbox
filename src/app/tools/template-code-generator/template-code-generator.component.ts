@@ -124,15 +124,17 @@ export class TemplateCodeGeneratorComponent implements OnInit {
         //     - Brace attributes between hooks with '.directive" class
         code = code.split(' [').join(` <span class="c-directive">[`).split(']=').join(`]</span>=`);
 
-        for(let item of this.directives){
+        for (const item of this.directives){
             code = code.split(item).join(`<span class="c-directive">${item}</span>`)
         }
-        for(let item of this.components){
+        for (const item of this.components){
             code = code.split(item).join(`<span class="c-component">${item}</span>`)
         }
-        for(let item of this.commonAttrs){
+        for (const item of this.commonAttrs){
             code = code.split(item).join(`<span class="c-attr">${item}</span>`)
         }
+        code = code.split('{').join('&#123;').split('}').join('&#125;')
+
 
         // 4 - Restore class attribute
         code = code.split('*class').join('class');
@@ -153,24 +155,26 @@ export class TemplateCodeGeneratorComponent implements OnInit {
         // 3 - Highlight
         //     - Brace what's between quotes with '.c-value' class
         code = code.replace(/("([^"]|"")*")/g, `<span class="c-string-value">$1</span>`);
+
         //     - Brace what's between simple quotes with '.c-value' class
         code = code.replace(/('([^']|'')*')/g, `<span class="c-string-value">$1</span>`);
 
         //     - Brace numbers with '.c-value' class
         code = code.replace(/([0-9])/g, `<span class="c-directive">$1</span>`);
 
-        for(let item of this.declarators){
-            code = code.split(item).join(`<span class="c-value">${item}</span>`)
+        for (const item of this.declarators){
+            code = code.split(item).join(`<span class="c-value">${item}</span>`);
         }
-        for(let item of this.types){
-            code = code.split(item).join(`<span class="c-attr">${item}</span>`)
+        for (const item of this.types){
+            code = code.split(item).join(`<span class="c-attr">${item}</span>`);
         }
-        for(let item of this.values){
-            code = code.split(item).join(`<span class="c-directive">${item}</span>`)
+        for (const item of this.values){
+            code = code.split(item).join(`<span class="c-directive">${item}</span>`);
         }
-        for(let item of this.operators){
-            code = code.split(item).join(`<span class="c-attr">${item}</span>`)
+        for (const item of this.operators){
+            code = code.split(item).join(`<span class="c-attr">${item}</span>`);
         }
+        code = code.split('{').join('&#123;').split('}').join('&#125;')
         // 4 - Restore class
         code = code.split('*class').join('class');
 

@@ -5,22 +5,8 @@
 @import '../../../../scss/bootstrap/scss/mixins';
 @import '../../../../scss/bootstrap/scss/tables';
 
-// Checkbox
-@import '../../../../scss/components/check-box';
-
-// Radio
-@import '../../../../scss/components/radio-input';
-
 //Form
 @import '../../../../scss/components/form';
-
-
-.section-radio {
-
-    .form-group {
-        margin: 0;
-    }
-}
 
 .section-button-group {
 
@@ -28,8 +14,7 @@
         margin: 0;
     }
 
-    .form-group {
-
+    .btn-group {
         margin: 0;
         width: 50%;
     }
