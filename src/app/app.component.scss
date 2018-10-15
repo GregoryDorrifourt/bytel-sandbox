@@ -3,28 +3,41 @@
 @import '../scss/bootstrap/scss/mixins/breakpoints';
 @import '../scss/custom';
 
+.wrap {
+
+    background-color: #ececec;
+    height: 100%;
+}
 .header {
+
     background-color: $white;
     border-bottom: 1px solid $fade-grey;
 }
+
 .main-wrapper {
 
-    background-color: #ececec;
-    min-height: 50rem;
+
+    min-height: calc(100% - 5.1rem);
 
     @include media-breakpoint-up(lg){
+
+        align-items: stretch;
         display: flex;
         flex: 1 0 auto;
         flex-flow: row nowrap;
-        align-items: stretch;
-
-
-        .aside {
-            width: 30rem;
-        }
 
         .content {
             width: calc(100% - 30rem);
+        }
+    }
+
+    .aside {
+
+        @include media-breakpoint-up(lg){
+
+            background-color: $white;
+            border-right: 2px solid rgba(0,0,0,.1);
+            width: 30rem;
         }
     }
 }

@@ -35,72 +35,135 @@ h5,
 h6 {
     font-weight: normal;
 }
+
+html,
+body {
+
+    min-height: 100%;
+}
+
 html {
 
     font-size: $default-root-font-size;
+}
 
-    body {
-        color: $text-color;
-        font-family: $font-family-base;
-        font-size: $font-size-base;
-    }
+body {
+    color: $text-color;
+    background: $silver-mercury;
+    font-family: $font-family-base;
+    font-size: $font-size-base;
+}
 
+pre {
+    width: 100%;
 }
 
 // box white
 .box-header,
 .box-content {
+
     background-color: $white;
 }
 
 .box-header {
-  margin-bottom: .2rem;
-    position: sticky;
-    top: 4.6rem;
-    z-index: 1;
+
     border-bottom: 2px solid $fade-grey;
+    margin-bottom: .2rem;
+    position: sticky;
+    top: 5.1rem;
+    z-index: 5;
+}
+
+.box-content {
+
+    .intro {
+        font-weight: 600;
+    }
+
+    .title-section {
+
+        font-size: 2.2rem;
+        font-weight: 700;
+    }
+
+    .section-component {
+        margin-bottom: 3rem;
+    }
+
+    // color view code
+    .c-info,
+    .c-attr,
+    .info {
+        color: $brand-info;
+    }
+
+    .c-value,
+    .primary {
+        color: $brand-primary;
+    }
+
+    .c-string {
+        color: $black;
+    }
+
+    .c-string-value,
+    .warning{
+        color: $brand-warning;
+    }
+
+    .c-directive,
+    .danger{
+        color: $brand-danger;
+    }
+
+    .c-component,
+    .success{
+        color: $brand-success;
+    }
+}
+
+.code-wrapper {
+
+    position: relative;
+
+    .btn-copy {
+
+        color: #818a91;
+        cursor: pointer;
+        font-family: monospace;
+        font-size: 1.5rem;
+        opacity: 0.7;
+        position: absolute;
+        right: 5px;
+        top: 8px;
+    }
+}
+
+.view-code {
+
+    border: 3px solid #f7f7f9;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+
+    .highlight {
+
+        margin: 0;
+        padding: 2rem;
+    }
 }
 
 .showcase-code {
 
-    background: #F9F9F9;
+    background: #f7f7f9;
     border-radius: .3rem;
-    color: $silver-chalice;
-    font-family: Courier New, Arial;
+    color: $brand-secondary;
+    font-family: Menlo, Courier;
     font-size: $font-size-base;
     padding: .3rem;
 
     &+& {
         margin-left: .5rem;
     }
-
-    &.info {
-        color: $brand-info;
-    }
-
-    &.danger,
-    .directive {
-        color: $brand-danger;
-    }
-
-    &.success,
-    .component {
-        color: $brand-success;
-    }
-
-    &.warning,
-    .string {
-        color: $brand-warning;
-    }
-
-    &.primary,
-    .attr {
-        color: $brand-primary;
-    }
-}
-
-.link{
-    color: $brand-primary;
 }
 
 .jumbotron {
@@ -112,6 +175,7 @@ html {
     display: inline-block;
 
     .icon {
+
         fill: $brand-secondary;
         height: 6.4rem;
         width: 6.4rem;
@@ -151,15 +215,11 @@ html {
     z-index: 9999;
 }
 
-
-pre {
-    width: 100%;
-}
-
 .link{
 
-    padding: .2rem .5rem;
+    color: $brand-primary;
     border: .1rem solid transparent;
+    padding: .2rem .5rem;
 
     &:hover{
         text-decoration: none;
@@ -222,11 +282,11 @@ pre {
 
 .table-description {
 
-    margin: 2rem auto 4rem;
+    margin: 2rem auto 3rem;
     font-size: $font-size-lg;
 
     th {
-        background-color: #F9F9F9;
+        background-color: #f7f7f9;
 
         .type {
             font-weight: normal;
@@ -249,7 +309,7 @@ pre {
 
 .title-description {
 
-    border-bottom: 2px solid #F9F9F9;
+    border-bottom: 2px solid #f7f7f9;
     font-size: 2.4rem;
     margin-bottom: 2rem;
     width: 100%;
@@ -257,7 +317,7 @@ pre {
 
 .module-description {
 
-    background-color: #F9F9F9;
+    background-color: #f7f7f9;
     border: 1px solid $silver-nobel;
     border-radius: 0.6rem;
     font-size: $font-size-lg;
@@ -268,7 +328,7 @@ pre {
 }
 
 
-.c-primary{
+/*.c-primary{
     color: $brand-primary;
 }
 .c-secondary{
@@ -285,4 +345,4 @@ pre {
 }
 .c-danger{
     color: $brand-danger;
-}
+}*/

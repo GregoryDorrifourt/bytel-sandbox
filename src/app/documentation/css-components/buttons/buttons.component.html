@@ -1,0 +1,149 @@
+
+<!-- BUTTONS -->
+<div class="box">
+    <div class="alert alert-success notification-alert" *ngIf="copied">
+        Copié dans le presse-papier avec succes !
+    </div>
+
+    <div class="box-header">
+        <h2 class="box-title">Boutons de Bouygues Télécom</h2>
+    </div>
+
+    <div class="box-content">
+
+        <!-- Buttons -->
+        <section class="section-component">
+
+            <h3 class="title-section">Buttons</h3>
+
+            <p>Plusieurs styles de bouton prédéfinis que Bouygues Télécom utilise.</p>
+
+            <div class="view-code">
+
+                <div class="highlight">
+                    <button type="button" class="btn btn-default">Default</button>
+                    <button type="button" class="btn btn-primary">Primary</button>
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                    <button type="button" class="btn btn-info">Info</button>
+                </div>
+
+                <div class="code-wrapper">
+                    <button class="btn btn-copy" (click)="copyCode(sample1)">Copier</button>
+
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-default"</span>&gt;<span class="c-string">Default</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary"</span>&gt;<span class="c-string">Primary</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-secondary"</span>&gt;<span class="c-string">Secondary</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-info"</span>&gt;<span class="c-string">Info</span>&lt;/button&gt;</pre>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Outline buttons -->
+        <section class="section-component">
+
+            <h3 class="title-section">Outline buttons</h3>
+
+            <p>Par moment nous avont besoin seulement d'un border et non du couleur de fond. Dans ce cas la remplacer la classe <span class="primary">.btn-*</span> par <span class="primary">.btn-outline-* </span>.</p>
+
+            <div class="view-code">
+
+                <div class="highlight">
+                    <button type="button" class="btn btn-outline-default">Default</button>
+                    <button type="button" class="btn btn-outline-primary">Primary</button>
+                    <button type="button" class="btn btn-outline-secondary">Secondary</button>
+                    <button type="button" class="btn btn-outline-info">Info</button>
+                </div>
+
+                <div class="code-wrapper">
+                    <button class="btn btn-copy" (click)="copyCode(sample2)">Copier</button>
+
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-default"</span>&gt;<span class="c-string">Default</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary"</span>&gt;<span class="c-string">Primary</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-secondary"</span>&gt;<span class="c-string">Secondary</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-info"</span>&gt;<span class="c-string">Info</span>&lt;/button&gt;</pre>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sizes -->
+        <section class="section-component">
+
+            <h3 class="title-section">Sizes</h3>
+
+            <p>Ayez des boutons plus grands ou plus petits ? Ajoutez <span class="primary">.btn-lg</span> ou <span class="primary">.btn-sm</span> pour des tailles supplémentaires.</p>
+
+            <div class="view-code">
+
+                <div class="highlight">
+                    <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                    <button type="button" class="btn btn-outline-primary btn-lg">Large button</button>
+                </div>
+
+                <div class="code-wrapper">
+                    <button class="btn btn-copy" (click)="copyCode(sample3)">Copier</button>
+
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-lg"</span>&gt;<span class="c-string">Large button</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-lg"</span>&gt;<span class="c-string">Large button</span>&lt;/button&gt;</pre>
+                </div>
+            </div>
+
+            <div class="view-code">
+
+                <div class="highlight">
+                    <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                    <button type="button" class="btn btn-outline-primary btn-sm">Small button</button>
+                </div>
+
+                <div class="code-wrapper">
+                    <button class="btn btn-copy" (click)="copyCode(sample4)">Copier</button>
+
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-sm"</span>&gt;<span class="c-string">Small button</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-sm"</span>&gt;<span class="c-string">Small button</span>&lt;/button&gt;</pre>
+                </div>
+            </div>
+
+            <p>Pour créer un bouton qui à une taille de 100%. Soit rajouter une <span class="primary">width: 100%</span> en css, soit ajouter la classe <span class="primary">.btn-block</span> dans le HTML.</p>
+
+            <div class="view-code">
+
+                <div class="highlight">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Block button</button>
+                    <button type="button" class="btn btn-outline-primary btn-lg btn-block">Block button</button>
+                </div>
+
+                <div class="code-wrapper">
+                    <button class="btn btn-copy" (click)="copyCode(sample5)">Copier</button>
+
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-lg btn-block"</span>&gt;<span class="c-string">Block button</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-lg btn-block"</span>&gt;<span class="c-string">Block button</span>&lt;/button&gt;</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Disabled -->
+        <section class="section-component">
+
+            <h3 class="title-section">Disabled</h3>
+
+            <p>Pour que le bouton soit inactif ajouter l'attribut <span class="primary">disabled</span>.</p>
+
+            <div class="view-code">
+
+                <div class="highlight">
+                    <button type="button" class="btn btn-primary btn-lg" disabled>Disabled button</button>
+                    <button type="button" class="btn btn-outline-primary btn-lg" disabled>Disabled button</button>
+                </div>
+
+                <div class="code-wrapper">
+                    <button class="btn btn-copy" (click)="copyCode(sample6)">Copier</button>
+
+                    <pre class="showcase-code highlight">&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-primary btn-lg"</span> disabled&gt;<span class="c-string">Disabled button</span>&lt;/button&gt;
+&lt;button<span class="c-attr"> type=</span><span class="c-value">"button"</span> <span class="c-attr">class</span>=<span class="c-value">"btn btn-outline-primary btn-lg"</span> disabled&gt;<span class="c-string">Disabled button</span>&lt;/button&gt;</pre>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

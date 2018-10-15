@@ -1,0 +1,44 @@
+<div class="box">
+    <div class="alert alert-success notification-alert" *ngIf="copied">
+        Copié dans le presse-papier avec succes !
+    </div>
+    <div class="box-header justify-content-between">
+        <div class="col-auto">
+            <h2 class="box-title">Générateur de code view</h2>
+        </div>
+
+    </div>
+    <div class="box-content">
+        Outil servant à générer du code view.
+    </div>
+    <div class="box-content">
+        <section>
+            <h3>Input :</h3>
+            <div>
+                <label for="html">
+                    <input id="html" type="radio" name="codeType" value="html" [formControl]="codeType"/>
+                    HTML
+                </label>
+                <label for="js">
+                    <input id="js" type="radio" name="codeType" value="js" [formControl]="codeType"/>
+                    JS
+                </label>
+            </div>
+            <textarea class="input-code-area" [formControl]="inputCode" placeholder="Collez le code" rows="20"></textarea>
+            <p class="button-wrapper">
+                <button role="button" class="btn btn-primary btn-lg" (click)="generateCode(inputCode.value)" [disabled]="!inputCode.value">Générer</button>
+            </p>
+        </section>
+        <section *ngIf="outputCode">
+            <hr />
+            <h3>Output :</h3>
+            <div class="view-code" >
+                <pre class="showcase-code highlight" [innerHTML]="outputCode"></pre>
+            </div>
+            <p class="button-wrapper">
+                <button role="button" class="btn btn-primary btn-lg" (click)="copyCode(outputCode)">Copier le code généré</button>
+            </p>
+        </section>
+    </div>
+
+</div>

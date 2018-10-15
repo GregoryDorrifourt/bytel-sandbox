@@ -1,0 +1,119 @@
+<!-- FORMS -->
+<div class="box">
+    <div class="alert alert-success notification-alert" *ngIf="copied">
+        Copié dans le presse-papier avec succes !
+    </div>
+
+    <div class="box-header">
+        <h2 class="box-title"><span class="anchor" id="forms"></span>Checkbox & Radio</h2>
+    </div>
+
+    <div class="box-content">
+
+        <!-- Checkbox -->
+        <section class="section-component">
+
+            <h3 class="title-section">Checkbox</h3>
+
+            <table class="table table-bordered table-description">
+                <tbody>
+                <tr>
+                    <th scope="row">Source CSS</th>
+                    <td class="c-info">@import "/scss/components/check-box";</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="view-code">
+
+                <div class="highlight">
+                    <label class="check-box-container" for="cb">
+                        <input type="checkbox" class="check-box-input" id="cb" [formControl]="sampleCB">
+                        <span class="check-box">
+                            <i class="icon-item">
+                                <span btlSvg defsFolder="web" file="common-defs" name="shape-icon-check" class="icon s-check"></span>
+                            </i>
+                        </span>
+                        Sélectionnez moi
+                    </label>
+                </div>
+
+                <div class="code-wrapper">
+                    <button class="btn btn-copy" (click)="copyCode(sample1)">Copier</button>
+
+                    <pre class="showcase-code highlight">
+&lt;label <span class="c-attr">class</span>=<span class="c-value">"check-box-container"</span><span class="c-attr"> for=</span><span class="c-value">"cb"</span>&gt;
+    &lt;input<span class="c-attr"> type=</span><span class="c-value">"checkbox"</span> <span class="c-attr">class</span>=<span class="c-value">"check-box-input"</span><span class="c-attr"> id</span>=<span class="c-value">"cb"</span> <span class="c-directive">[formControl]</span>=<span class="c-value">"sampleCB"</span>&gt;
+    &lt;span <span class="c-attr">class</span>=<span class="c-value">"check-box"</span>&gt;
+        &lt;i <span class="c-attr">class</span>=<span class="c-value">"icon-item"</span>&gt;
+            &lt;span <span class="c-directive">btlSvg</span><span class="c-attr"> file</span>=<span class="c-value">"common-defs"</span><span class="c-attr"> name</span>=<span class="c-value">"shape-icon-check"</span> <span class="c-attr">class</span>=<span class="c-value">"icon s-check"</span>&gt;&lt;/span&gt;
+        &lt;/i&gt;
+    &lt;/span&gt;
+    <span class="c-string">Sélectionnez moi</span>
+&lt;/label&gt;</pre>
+                </div>
+            </div>
+        </section>
+
+        <!-- Radio -->
+        <section class="section-component section-radio">
+
+            <h3 class="title-section">Radio</h3>
+
+            <table class="table table-bordered table-description">
+                <tbody>
+                <tr>
+                    <th scope="row">Source CSS</th>
+                    <td class="c-info">@import "/scss/components/radio-input";</td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="view-code">
+
+                <div class="highlight">
+
+                    <div class="form-group">
+                        <div class="label-field">
+                            <label for="name1">
+                                <input class="form-control radio-input-field" hidden type="radio" id="name1" value="0" name="sampleRadio" [formControl]="sampleRadio">
+                                <span class="radio-input-check"></span>
+                                <span class="label-offer label">Choix 1</span>
+                            </label>
+                        </div>
+
+                        <div class="label-field">
+                            <label for="name2">
+                                <input class="form-control radio-input-field" hidden type="radio" id="name2" value="1" name="sampleRadio" [formControl]="sampleRadio">
+                                <span class="radio-input-check"></span>
+                                <span class="label-offer label">Choix 2</span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-wrapper">
+                    <button class="btn btn-copy" (click)="copyCode(sample2)">Copier</button>
+
+                    <pre class="showcase-code highlight">&lt;div <span class="c-attr">class</span>=<span class="c-value">"form-group"</span>&gt;
+    &lt;div <span class="c-attr">class</span>=<span class="c-value">"label-field"</span>&gt;
+        &lt;label<span class="c-attr"> for=</span><span class="c-value">"name1"</span>&gt;
+            &lt;input <span class="c-attr">class</span>=<span class="c-value">"form-control radio-input-field"</span> hidden<span class="c-attr"> type=</span><span class="c-value">"radio"</span><span class="c-attr"> id</span>=<span class="c-value">"name1"</span> value=<span class="c-value">"0"</span><span class="c-attr"> name</span>=<span class="c-value">"sampleRadio"</span> <span class="c-directive">[formControl]</span>=<span class="c-value">"sampleRadio"</span>&gt;
+            &lt;span <span class="c-attr">class</span>=<span class="c-value">"radio-input-check"</span>&gt;&lt;/span&gt;
+            &lt;span <span class="c-attr">class</span>=<span class="c-value">"label-offer label"</span>&gt;<span class="c-string">Choix 1</span>&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;
+
+    &lt;div <span class="c-attr">class</span>=<span class="c-value">"label-field"</span>&gt;
+        &lt;label<span class="c-attr"> for=</span><span class="c-value">"name2"</span>&gt;
+            &lt;input <span class="c-attr">class</span>=<span class="c-value">"form-control radio-input-field"</span> hidden<span class="c-attr"> type=</span><span class="c-value">"radio"</span><span class="c-attr"> id</span>=<span class="c-value">"name2"</span> value=<span class="c-value">"1"</span><span class="c-attr"> name</span>=<span class="c-value">"sampleRadio"</span> <span class="c-directive">[formControl]</span>=<span class="c-value">"sampleRadio"</span>&gt;
+            &lt;span <span class="c-attr">class</span>=<span class="c-value">"radio-input-check"</span>&gt;&lt;/span&gt;
+            &lt;span <span class="c-attr">class</span>=<span class="c-value">"label-offer label"</span>&gt;<span class="c-string">Choix 2</span>&lt;/span&gt;
+        &lt;/label&gt;
+    &lt;/div&gt;<span class="c-string">
+</span>&lt;/div&gt;</pre>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>

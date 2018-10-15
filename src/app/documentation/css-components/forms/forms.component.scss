@@ -1,0 +1,21 @@
+@import '../../../../scss/bootstrap/scss/functions';
+@import '../../../../scss/bootstrap/scss/variables';
+@import '../../../../scss/custom';
+
+@import '../../../../scss/bootstrap/scss/mixins';
+@import '../../../../scss/bootstrap/scss/tables';
+
+//Form
+@import '../../../../scss/components/form';
+
+.section-button-group {
+
+    .form-container {
+        margin: 0;
+    }
+
+    .btn-group {
+        margin: 0;
+        width: 50%;
+    }
+}

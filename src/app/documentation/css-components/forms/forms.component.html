@@ -1,0 +1,68 @@
+<!-- FORMS -->
+<div class="box">
+    <div class="alert alert-success notification-alert" *ngIf="copied">
+        Copié dans le presse-papier avec succes !
+    </div>
+
+    <div class="box-header">
+        <h2 class="box-title"><span class="anchor" id="forms"></span>Formulaires</h2>
+    </div>
+
+    <div class="box-content">
+
+        <p class="intro">Voici plusieurs éléments qui peuvent être utilisés dans nos formulaires. <br>Pour utiliser ce composant il faut que le parent du formulaire contienne la classe <span class="primary">.form-container</span>.</p>
+
+        <table class="table table-bordered table-description">
+            <tbody>
+            <tr>
+                <th scope="row">Source CSS</th>
+                <td class="c-info">@import '/scss/components/form';</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!-- BTN Group -->
+        <section class="section-component section-button-group">
+
+            <h3 class="title-section">Button group</h3>
+
+            <div class="view-code">
+
+                <div class="highlight">
+
+                    <div class="form-container">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <label class="btn btn-input-group" for="radio1" [ngClass]="{'btn-outline-info': sampleButtonGroup.value !== '0','btn-info': sampleButtonGroup.value === '0'}">
+                                <input class="form-control" hidden type="radio" id="radio1" value="0" name="sampleButtonGroup" [formControl]="sampleButtonGroup">
+                                Monsieur
+                            </label>
+
+                            <label class="btn btn-input-group" for="radio2" [ngClass]="{'btn-outline-info': sampleButtonGroup.value !== '1','btn-info': sampleButtonGroup.value === '1'}">
+                                <input class="form-control" hidden type="radio" id="radio2" value="1" name="sampleButtonGroup" [formControl]="sampleButtonGroup">
+                                Madame
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="code-wrapper">
+                    <button class="btn btn-copy">Copier</button>
+
+                    <pre class="showcase-code highlight">&lt;div <span class="c-attr">class</span>=<span class="c-value">"form-container"</span>&gt;
+    &lt;div <span class="c-attr">class</span>=<span class="c-value">"btn-group"</span><span class="c-attr"> role</span>=<span class="c-value">"group"</span> aria-label=<span class="c-value">"Basic example"</span>&gt;
+        &lt;label <span class="c-attr">class</span>=<span class="c-value">"btn btn-input-group"</span><span class="c-attr"> for=</span><span class="c-value">"radio1"</span> <span class="c-directive">[ngClass]</span>=<span class="c-value">"&#123;<span class="c-string-value">'btn-outline-info'</span>: sampleButtonGroup.value !== <span class="c-string-value">'0'</span>,<span class="c-string-value">'btn-info'</span>: sampleButtonGroup.value === <span class="c-string-value">'0'</span>&#125;"</span>&gt;
+            &lt;input <span class="c-attr">class</span>=<span class="c-value">"form-control"</span> hidden<span class="c-attr"> type=</span><span class="c-value">"radio"</span><span class="c-attr"> id</span>=<span class="c-value">"radio1"</span> value=<span class="c-value">"0"</span><span class="c-attr"> name</span>=<span class="c-value">"sampleButtonGroup"</span> <span class="c-directive">[formControl]</span>=<span class="c-value">"sampleButtonGroup"</span>&gt;
+            Monsieur
+        &lt;/label&gt;
+        &lt;label <span class="c-attr">class</span>=<span class="c-value">"btn btn-input-group"</span><span class="c-attr"> for=</span><span class="c-value">"radio2"</span> <span class="c-directive">[ngClass]</span>=<span class="c-value">"&#123;<span class="c-string-value">'btn-outline-info'</span>: sampleButtonGroup.value !== <span class="c-string-value">'1'</span>,<span class="c-string-value">'btn-info'</span>: sampleButtonGroup.value === <span class="c-string-value">'1'</span>&#125;"</span>&gt;
+            &lt;input <span class="c-attr">class</span>=<span class="c-value">"form-control"</span> hidden<span class="c-attr"> type=</span><span class="c-value">"radio"</span><span class="c-attr"> id</span>=<span class="c-value">"radio2"</span> value=<span class="c-value">"1"</span><span class="c-attr"> name</span>=<span class="c-value">"sampleButtonGroup"</span> <span class="c-directive">[formControl]</span>=<span class="c-value">"sampleButtonGroup"</span>&gt;
+            Madame
+        &lt;/label&gt;
+    &lt;/div&gt;<span class="c-string">
+</span>&lt;/div&gt;</pre>
+
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
