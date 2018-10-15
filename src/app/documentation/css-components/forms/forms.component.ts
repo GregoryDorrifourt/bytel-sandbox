@@ -20,7 +20,7 @@ export class FormsComponent implements OnInit {
         private ctc: CopyToClipboardService
     ) { }
 
-    private sample1 = ``;
+    public sample1 = ``;
 
 
 

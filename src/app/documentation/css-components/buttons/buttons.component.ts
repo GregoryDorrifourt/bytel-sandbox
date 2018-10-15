@@ -16,12 +16,12 @@ export class ButtonsComponent implements OnInit {
         private ctc: CopyToClipboardService
     ) { }
 
-    private sample1 = `<button type="button" class="btn btn-primary">Primary</button>`;
-    private sample2 = `<button type="button" class="btn btn-outline-primary">Primary</button>`;
-    private sample3 = `<button type="button" class="btn btn-primary btn-lg">Large button</button>`;
-    private sample4 = `<button type="button" class="btn btn-primary btn-sm">Small button</button>`;
-    private sample5 = `<button type="button" class="btn btn-primary btn-lg btn-block">Block button</button>`;
-    private sample6 = `<button type="button" class="btn btn-primary btn-lg" disabled>Disabled button</button>`;
+    public sample1 = `<button type="button" class="btn btn-primary">Primary</button>`;
+    public sample2 = `<button type="button" class="btn btn-outline-primary">Primary</button>`;
+    public sample3 = `<button type="button" class="btn btn-primary btn-lg">Large button</button>`;
+    public sample4 = `<button type="button" class="btn btn-primary btn-sm">Small button</button>`;
+    public sample5 = `<button type="button" class="btn btn-primary btn-lg btn-block">Block button</button>`;
+    public sample6 = `<button type="button" class="btn btn-primary btn-lg" disabled>Disabled button</button>`;
 
 
     ngOnInit() {

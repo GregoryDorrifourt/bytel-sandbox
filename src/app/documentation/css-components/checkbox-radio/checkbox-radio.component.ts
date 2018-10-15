@@ -20,7 +20,7 @@ export class CheckboxRadioComponent implements OnInit {
         private ctc: CopyToClipboardService
     ) { }
 
-    private sample1 = `<label class="check-box-container" for="cb">
+    public sample1 = `<label class="check-box-container" for="cb">
                             <input type="checkbox" class="check-box-input" id="cb" [formControl]="sampleCB">
                             <span class="check-box">
                                 <i class="icon-item">
@@ -30,7 +30,7 @@ export class CheckboxRadioComponent implements OnInit {
                             Sélectionnez moi
                       </label>`;
 
-    private sample2 = `<div class="form-group">
+    public sample2 = `<div class="form-group">
                             <div class="label-field">
                                 <label for="name1">
                                     <input class="form-control radio-input-field" hidden type="radio" id="name1" value="0" name="sampleRadio" [formControl]="sampleRadio">
