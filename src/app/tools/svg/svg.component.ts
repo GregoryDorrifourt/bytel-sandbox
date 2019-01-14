@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { CopyToClipboardService } from '../../base/services/copy-to-clipboard.service';
 import { HelperService } from '../../base/services/helper.service';
 import { forkJoin, pipe, of } from 'rxjs';
-import { tap, map, catchError } from 'rxjs/operators';
-import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
+import {FormGroup, FormBuilder} from '@angular/forms';
 
 @Component({
     selector: 'sb-svg',
@@ -22,16 +21,17 @@ export class SvgComponent implements OnInit, OnDestroy {
 
     public ngOnInit() {
 
-        const baseHref: string = '/assets/gulp';
+        const baseHref = '/assets/gulp';
         this.buildForm();
 
         forkJoin(
             // @TODO: How to catch errors
             this.http$.get(`${baseHref}/svg.json`),
             this.http$.get(`${baseHref}/web-svg.json`),
-            this.http$.get(`${baseHref}/tlv-svg.json`)
+            this.http$.get(`${baseHref}/tlv-svg.json`),
+            this.http$.get(`${baseHref}/rcbt-svg.json`)
         ).subscribe((data) => {
-            const canals = ['web', 'angular2_web', 'angular2_telesales'];
+            const canals = ['web', 'angular2_web', 'angular2_telesales', 'rcbt'];
             for (const canal in data) {
                 if (data[canal]) {
                     this.svgData[canals[canal]] = data[canal];
